@@ -15,7 +15,7 @@ function Whichselect(formName,name){
       
       target = document.getElementById("output");
 
-      if (check1 == true) {
+      if (check == true) {
         target.innerHTML = "要素1がチェックされています。<br/>";
       }
       
