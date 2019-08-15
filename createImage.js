@@ -11,27 +11,14 @@ function toDraw() {
           }
 
 function Whichselect(formName,name){
-          var element = document.getElementById( "formName" ) ;
-          var cvs = document.getElementById('cv2');
-           var ctx = cvs.getContext('2d');
-          var img = new Image();
- 
-          // form要素内のラジオボタングループ(name="hoge")を取得
-          var radioNodeList = element.name ;
+      check = document.formname.name.checked;
+      
+      target = document.getElementById("output");
 
-          // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
-          var select = radioNodeList.value ;
-
-          if ( select === "" ) {
-                    // 未選択状態
-          } else {
-                    // selectには選択状態の値が代入されている
-                     img.src = select + ".png";
-                    console.log( select ) ;
-                    img.onload = function(){
-                    ctx.drawImage(img, 0, 0, 400, 300);  //400x300に縮小表示
-  }
-          }
+      if (check1 == true) {
+        target.innerHTML = "要素1がチェックされています。<br/>";
+      }
+      
 }
 
 
