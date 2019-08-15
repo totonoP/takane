@@ -11,7 +11,7 @@ function toDraw() {
           }
 
 function SelectImage(imgname,cvnum){
-          var cvs= document.createElement('cvnum').getContext('2d')
+         var cvs = document.getElementById("cv").getContext("2d");
           var img = new Image();
           img.src = "entrance.png";
  
