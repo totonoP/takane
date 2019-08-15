@@ -9,6 +9,6 @@ function toDraw() {
 
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
 
-          //ctx.font = "10px Arial"; //フォントにArial,40px,斜体を指定
-          //ctx.fillStyle = "black"; //塗り潰し色を緑に
+          ctx.font = "20px Arial"; //フォントにArial,40px,斜体を指定
+          ctx.fillStyle = "black"; //塗り潰し色を緑に
           }
