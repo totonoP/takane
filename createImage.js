@@ -5,9 +5,9 @@ function onKey() {
           
         }
 function toDraw() {
-          ctx = document.getElementById("cv").getContext("2d");
+          var ctx = document.getElementById("cv").getContext("2d");
 
-          var txt = "suika";//描画する文字
+          var txt ="JavaScript"; //描画する文字
 
           ctx.font = "italic 40px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "green"; //塗り潰し色を緑に
