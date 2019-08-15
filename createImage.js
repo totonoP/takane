@@ -9,3 +9,20 @@ function toDraw() {
           ctx.fillText(txt,10,50);      //テキストを塗り潰しで描画
           
           }
+
+function Whichselect(){
+          var element = document.getElementById( "target" ) ;
+
+          // form要素内のラジオボタングループ(name="hoge")を取得
+          var radioNodeList = element.hoge ;
+
+          // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
+          var select = radioNodeList.value ;
+
+          if ( select === "" ) {
+                    // 未選択状態
+          } else {
+                    // selectには選択状態の値が代入されている
+                    console.log( a ) ;
+          }
+}
