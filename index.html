@@ -1,4 +1,6 @@
 
+  
+HTMLソース
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,29 +9,21 @@
 
 <script type="text/javascript">
 
-function sample() {
-//描画コンテキストの取得
-var canvas = document.getElementById('sample1');
-if (canvas.getContext) {
+var ctx = document.getElementById("cv").getContext("2d");
 
-var context = canvas.getContext('2d');
+var txt ="JavaScript"; //描画する文字
 
-//左から20上から40の位置に、幅50高さ100の四角形を描く
-context.fillRect(20,40,50,100); 
+ctx.font = "italic 40px Arial"; //フォントにArial,40px,斜体を指定
+ctx.fillStyle = "green"; //塗り潰し色を緑に
 
-//色を指定する
-context.strokeStyle = 'rgb(00,00,255)'; //枠線の色は青
-context.fillStyle = 'rgb(255,00,00)'; //塗りつぶしの色は赤
+ctx.fillText(txt,10,50);      //テキストを塗り潰しで描画
+ctx.fillText(txt,10,100,100); //テキストの最大幅を100pxに指定
 
-//左から200上から80の位置に、幅100高さ50の四角の枠線を描く
-context.strokeRect(200,80,100,50);
+ctx.strokeStyle = "blue"; //輪郭線の色を青に
 
-//左から150上から75の位置に、半径60の半円を反時計回り（左回り）で描く
-context.arc(150,75,60,Math.PI*1,Math.PI*2,true);
-context.fill();
+ctx.strokeText(txt,10,150);     //テキスト輪郭を描画
+ctx.strokeText(txt,10,200,100); //テキストの最大幅を100pxに指定
 
-} 
-}
 
 </script>
 
@@ -41,5 +35,3 @@ context.fill();
 </canvas>
 </body>
 </html>
-
-  
