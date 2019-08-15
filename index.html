@@ -16,11 +16,16 @@
 </head>
 <body>
 	
-<input type="button" value="表示"
-       onclick="document.getElementById('CHECK').style.display = 'block';">
-	<input type="button" value="非表示"
-       onclick="document.getElementById('CHECK').style.display = 'none';">
-　
+	<input type="button" value="表示" onclick="document.getElementById('CHECK').style.display = 'block';">
+	<input type="button" value="非表示" onclick="document.getElementById('CHECK').style.display = 'none';">
+　<div id = "CHECK">
+	<input id="marry-b" type="radio" name="marry-to" value="bianca" checked>
+  	<label for="marry-b">ビアンカ</label>
+
+	 <!-- ラジオボタン選択肢 -->
+	 <input id="marry-f" type="radio" name="marry-to" value="flora">
+	 <label for="marry-f">フローラ</label>
+</div>
   
   <br><br>
 <form action="" name="textInput" id="serihu_form">
