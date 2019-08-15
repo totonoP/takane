@@ -12,7 +12,10 @@ function toDraw() {
 
 function Whichselect(formName,name){
           var element = document.getElementById( "formName" ) ;
-
+          var cvs = document.getElementById('takane');
+           var ctx = cvs.getContext('2d');
+          var img = new Image();
+ 
           // form要素内のラジオボタングループ(name="hoge")を取得
           var radioNodeList = element.name ;
 
@@ -23,7 +26,11 @@ function Whichselect(formName,name){
                     // 未選択状態
           } else {
                     // selectには選択状態の値が代入されている
-                    console.log( a ) ;
+                     img.src = select + ".png";
+                    console.log( select ) ;
+                    img.onload = function(){
+                    ctx.drawImage(img, 0, 0, 400, 300);  //400x300に縮小表示
+  }
           }
 }
 
