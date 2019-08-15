@@ -12,7 +12,7 @@ function toDraw() {
 
 function Whichselect(formName,name){
           var element = document.getElementById( "formName" ) ;
-          var cvs = document.getElementById('takane');
+          var cvs = document.getElementById('cv2');
            var ctx = cvs.getContext('2d');
           var img = new Image();
  
