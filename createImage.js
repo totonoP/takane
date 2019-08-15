@@ -5,7 +5,7 @@ function onKey() {
           
         }
 function toDraw() {
-          target = document.getElementById("cv").getContext("2d");
+          ctx = document.getElementById("cv").getContext("2d");
 
           var txt = document.forms.serihu_form.serihu.value;//描画する文字
 
