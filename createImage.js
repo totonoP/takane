@@ -13,7 +13,7 @@ function toDraw() {
 function SelectImage(imgname,cvnum){
           var cvs= document.createElement('cvnum').getContext('2d')
           var img = new Image();
-          img.src = imgname + ".png";
+          img.src = "entrance.png";
  
             //画像をcanvasに設定
             img.onload = function(){
