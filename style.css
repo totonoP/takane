@@ -2,13 +2,13 @@
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.cp_navi {
+.menu {
 	position: relative;
 	overflow: hidden;
 	width: 360px;
 	height:360px;
 }
-.cp_navi #cp_sidenav a {
+.menu #menus a {
 	font-size: 20px;
 	position: absolute;
 	left: -95px;
@@ -20,14 +20,12 @@
 	color: #ffffff;
 	border-radius: 0 5px 5px 0;
 }
-.cp_navi #cp_sidenav a:hover {
-	left: -10px;
-}
-.cp_navi #haikei {
+
+.menu #haikei {
 	top: 20px;
 	background-color: #da3c41;
 }
-.cp_navi #news {
+.menu #news {
 	top: 80px;
 	background-color: #1b2538;
 }
@@ -37,7 +35,7 @@
 }
 
 /*ボタン装飾*/
-.hidden_box label {
+.menu label {
     padding: 15px;
     font-weight: bold;
     border: solid 2px black;
@@ -45,21 +43,18 @@
 }
 
 /*ボタンホバー時*/
-.hidden_box label:hover {
+.menu label:hover {
     background: #efefef;
-}
-/*ボタンホバー時*/
-.hidden_box label:hover {
-    background: #efefef;
+	left: -10px;
 }
 
 /*チェックは見えなくする*/
-.hidden_box input {
+.menu input {
     display: none;
 }
 
 /*中身を非表示にしておく*/
-.hidden_box .hidden_show {
+.menu .hidden_show {
     height: 0;
     padding: 0;
     overflow: hidden;
@@ -68,7 +63,7 @@
 }
 
 /*クリックで中身表示*/
-.hidden_box input:checked ~ .hidden_show {
+.menu input:checked ~ .hidden_show {
     padding: 10px 0;
     height: auto;
     opacity: 1;
