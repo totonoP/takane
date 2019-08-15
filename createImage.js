@@ -12,7 +12,7 @@ function toDraw() {
 
 function SelectImage(imgname,cvnum) {
   //2Dコンテキストのオブジェクトを生成する
-  var cvs = document.getElementById('cv');
+  var cvs = document.getElementById('cvnum');
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
