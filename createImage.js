@@ -10,14 +10,15 @@ function toDraw() {
           
           }
 
-function Whichselect(formName,name){
-      check = document.formname.name.checked;
-      
-      target = document.getElementById("output");
-
-      if (check == true) {
-        target.innerHTML = "要素1がチェックされています。<br/>";
-      }
+function SelectImage(imgname,cvnum){
+          var cvs= document.createElement('cvnum').getContext('2d')
+          var img = new Image();
+          img.src = imgname + ".png";
+ 
+            //画像をcanvasに設定
+            img.onload = function(){
+              cvs.drawImage(img, 0, 0, 400, 300);  //400x300に縮小表示
+            }
       
 }
 
