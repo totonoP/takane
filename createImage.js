@@ -10,16 +10,19 @@ function toDraw() {
           
           }
 
-function SelectImage(imgname,cvnum){
-         var cvs = document.getElementById("cv").getContext("2d");
-          var img = new Image();
-          img.src = "entrance.png";
+function SelectImage(imgname,cvnum) {
+  //2Dコンテキストのオブジェクトを生成する
+  var cvs = document.getElementById('cv');
+  var ctx = cvs.getContext('2d');
  
-            //画像をcanvasに設定
-            img.onload = function(){
-              cvs.drawImage(img, 0, 0, 400, 300);  //400x300に縮小表示
-            }
-      
+  //画像オブジェクトを生成
+  var img = new Image();
+  img.src = "entrance.png";
+ 
+  //画像をcanvasに設定
+  img.onload = function(){
+    ctx.drawImage(img, 0, 0, 400, 300);  //400x300に縮小表示
+  }
 }
 
 
