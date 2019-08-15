@@ -7,6 +7,8 @@ HTMLソース
 <meta charset="UTF-8">
 <title>canvasで図形を描く</title>
 
+  <canvas id="cv" width="360" height="240"></canvas>
+  
 <script type="text/javascript">
 
 var ctx = document.getElementById("cv").getContext("2d");
@@ -28,10 +30,10 @@ ctx.strokeText(txt,10,200,100); //テキストの最大幅を100pxに指定
 </script>
 
 </head>
-<body onLoad="sample()">
+
 <h2>canvasで図形を描く</h2>
-<canvas id="sample1" style="background-color:yellow;">
+
 図形を表示するには、canvasタグをサポートしたブラウザが必要です。
-</canvas>
+
 </body>
 </html>
