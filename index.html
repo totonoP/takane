@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang=ja>
+ <head>
+  <meta charset=UTF-8>
+  <title>おはなしジェネレーター for アイドルマスターミリオンライブ！</title>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel=stylesheet href=ohanashi.css>
+  <link rel=icon href=./favicon.ico type=image/x-icon>
+ </head>
+ <body>
+  <header class="jumbotron">
+   <h1>おはなしジェネレーター</h1>
+   <p>アイドルマスターミリオンライブ！ のおはなしを作ろう！</p>
+   <p class=small>
+    別の方が作った <a href="http://oahiroaki.github.io/ohanashi-gen-dere/">for アイドルマスターシンデレラガールズ</a>もあります。
+   </p>
+  </header>
+
+  <main class="container">
+   <p class=nowloading><progress>ナウローディングプリーズウェイト</progress></p>
+  </main>
+
+  <footer>
+   <p>
+    お問い合わせは
+    <a href="https://twitter.com/furugomu">@furugomu</a>
+    へ。
+   </p>
+
+   <p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">Tweet</a>
+    <a href="https://github.com/furugomu/ohanashi">Fork me on GitHub!!!!!!!!!!!!</a>
+   </p>
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  </footer>
+
+  <template id=app-template>
+   <div>
+    <og-idols v-ref:idols></og-idols>
+    <og-faces v-ref:faces></og-faces>
+    <og-form v-ref:form></og-form>
+    <og-result v-ref:result></og-result>
+   </div>
+  </template>
+
+  <template id=idols-template>
+   <section>
+    <h2>アイドルを選ぶ</h2>
+
+    <div class="form-inline">
+    <span>
+     <label><input name=type type=radio v-model="search.type" value="">All</label>
+     <label><input name=type type=radio v-model="search.type" value="vo">Vo</label>
+     <label><input name=type type=radio v-model="search.type" value="da">Da</label>
+     <label><input name=type type=radio v-model="search.type" value="vi">Vi</label>
+     <label><input name=type type=radio v-model="search.type" value="ex">Ex</label>
+    </span>
+    <label>
+     <input type=search size=20 v-model="searchText" placeholder="にかいどう" class="form-control">
+    </label>
+    </div>
+
+    <ul class="nav nav-pills">
+     <li v-for="idol in idols | search"
+      @click="select(idol)"
+      :class="{active: selectedIdol === idol}">
+      <a>
+       <img class="face icon select" :src="idol.images[0]">
+      </a>
+     </li>
+    </ul>
+   </section>
+  </template>
+
+  <template id=faces-template>
+   <div><section v-if="idol">
+    <h2>表情を選ぶ</h2>
+
+    <div class="tab-content">
+     <div class="tab-pane active">
+      <span v-for="url in idol.images">
+       <img :src="url" alt="" @click="select(url)" class="face select">
+      </span>
+     </div>
+    </div>
+   </section></div>
+  </template>
+
+  <template id=form-template>
+   <div><section v-if="isReady">
+    <h2>せりふを考える</h2>
+    <form @submit="addParagraph">
+     <div class="scenario">
+      <og-item :idol="idol" :image="image" :text="text"></og-item>
+     </div>
+     <p><textarea v-model="text" rows=2 cols=60></textarea></p>
+     <p><button class="btn btn-default">↓追加↓</button></p>
+    </form>
+   </section></div>
+  </template>
+
+  <template id=result-template>
+   <section>
+    <h2>できあがり</h2>
+    <p><label><input type=checkbox v-model="editting">編集モード</label></p>
+
+    <section v-show="editting"><og-list v-show="editting"></og-list></section>
+
+    <section v-show="!editting">
+     <og-canvas v-ref:canvas></og-canvas>
+     <p>
+      長押しや右クリックで画像を保存してお楽しみください。
+     </p>
+     <p>
+      <button @click="open" class="btn btn-default">
+       保存できないので画像だけを表示してみる
+      </button>
+     </p>
+    </section>
+   </section>
+  </template>
+
+  <template id=list-template>
+     <div class="scenario">
+      <div v-for="p in paragraphs">
+       <og-item :idol="p.idol" :image="p.image" :text="p.text"></og-item>
+       <div>
+        <button class=btn type=button :disabled="$index === 0"
+         @click="moveup($index)">↑</button>
+        <button class=btn type=button :disalbed="$index + 1 === paragraphs.length"
+         @click="movedown($index)">↓</button>
+        <button class="btn btn-danger" type=button
+         @click="remove($index)">削除</button>
+       </div>
+      </div>
+     </div>
+  </template>
+
+  <template id=item-template>
+      <div class="paragraph">
+       <img :src="image" class=face>
+       <div class="fukidashi">
+        <p class="name" v-if="idol">{{idol.name}}</p>
+        <pre class="serifu">{{text}}</pre>
+       </div>
+      </div>
+  </template>
+
+  <script src=build.js></script>
+ </body>
+</html>
