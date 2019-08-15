@@ -7,7 +7,7 @@ function onKey() {
 function toDraw() {
           target = document.getElementById("cv").getContext("2d");
 
-          target.innerText = document.forms.serihu_form.serihu.value;//描画する文字
+          var txt = document.forms.serihu_form.serihu.value;//描画する文字
 
           ctx.font = "italic 40px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "green"; //塗り潰し色を緑に
