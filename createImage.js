@@ -6,4 +6,5 @@ function toDraw() {
 
           ctx.font = "20px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "black"; //塗り潰し色を黒に
+          ctx.fillText(txt,10,50);
           }
