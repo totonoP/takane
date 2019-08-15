@@ -10,11 +10,11 @@ function toDraw() {
           
           }
 
-function Whichselect(){
-          var element = document.getElementById( "target" ) ;
+function Whichselect(formName,name){
+          var element = document.getElementById( "formName" ) ;
 
           // form要素内のラジオボタングループ(name="hoge")を取得
-          var radioNodeList = element.hoge ;
+          var radioNodeList = element.name ;
 
           // 選択状態の値(value)を取得 (Bが選択状態なら"b"が返る)
           var select = radioNodeList.value ;
@@ -25,4 +25,29 @@ function Whichselect(){
                     // selectには選択状態の値が代入されている
                     console.log( a ) ;
           }
+}
+
+
+function gousei(){
+          var createImage= function(context){
+            var image= new Image
+            image.src= context.canvas.toDataURL()
+            return image
+          }
+
+          var haikei= document.createElement('canvas').getContext('2d')
+          context1.fillText('foo',0,10)
+
+          var takane= document.createElement('canvas').getContext('2d')
+          context2.fillText('bar',0,20)
+
+          var serihu= document.createElement('canvas').getContext('2d')
+          context3.fillText('baz',0,30)
+
+          var takanekomyu = document.createElement('canvas').getContext('2d')
+          context4.drawImage(createImage(haikei),0,0)
+          context4.drawImage(createImage(takane),0,0)
+          context4.drawImage(createImage(serihu),0,0)
+
+          document.body.appendChild(createImage(takanekomyu))
 }
