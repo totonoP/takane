@@ -38,9 +38,15 @@
 				<input type="radio" name="el" value="entrance" onchange = "Haikeiselect()"> エントランス
 				<input type="radio" name="el" value="jimusho" onchange = "Haikeiselect()"> 事務所
 			</div><br><br>
+		<input type="button" value="貴音さん" onclick="document.getElementById('pose').style.display = 'block';">
+			<div id = "pose" style="display:none">
+				<input type="button" value="戻る" onclick="document.getElementById('pose').style.display = 'none';">
+				<input type="radio" name="e2" value="pose1" onchange = "Haikeiselect()"> ポーズ１
+				<input type="radio" name="e2" value="pose2" onchange = "Haikeiselect()"> ポーズ２
+			</div><br><br>
 		
 		<form action="" name="textInput" id="serihu_form">
-			セリフ：<textarea rows="3" cols="60" id = "serihu">ここに記入してください</textarea>
+			セリフ：<textarea rows="3" cols="60" id = "serihu">面妖な！</textarea>
 			<input type="button" value="決定" onclick="toDraw()" />
 		</form>
 	</div>
