@@ -28,7 +28,7 @@ function DrawImage(num) {
  
   //画像オブジェクトを生成
   var img = new Image();
-  img.src ="back"+n+".png";
+  img.src ="back"+num+".png";
           
   //画像をcanvasに設定
   img.onload = function(){
