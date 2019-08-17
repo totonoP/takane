@@ -20,15 +20,6 @@ function Haikeiselect() {//選択中の値を取得
     }
   }
 
-function color() {
-            // キャンバスを取り出す
-            var canvas = document.getElementById('tryCanvas00');
-            // 2Dのコンテキストを取り出す
-            var ctx = canvas.getContext('2d');
-            // 指定の色で範囲内を塗りつぶす
-            ctx.fillStyle = 'rgb(255,0,255)';
-            ctx.fillRect(0, 0, 200, 200);
-        }
 
 function DrawImage() {
   //2Dコンテキストのオブジェクトを生成する
