@@ -3,22 +3,14 @@
     width: 360px;
     height: 240px; 
 }
-#cv {
-    position: absolute;
-    top: 0;
-    left: 0;
+.review-screen canvas{
+    position:  absolute;
+    top 0px;
+    left 0px;
 }
-#cv2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-#cv3 {
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 .select-elements {
+    position:  relative;
     margin-top 400px;
 }
 
