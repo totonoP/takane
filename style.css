@@ -1,7 +1,7 @@
 .review-screen {
-    position: relative;
+   // position: relative;
 }
-//.review-screen canvas {
-//    position: absolute;
+.review-screen canvas {
+    position: absolute;
     
-//}
+}
