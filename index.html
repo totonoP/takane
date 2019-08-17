@@ -14,27 +14,31 @@
 </head>
 <body>
 	a
-	<div class="review-screen">
-  <canvas id="cv" width="360" height="240"></canvas>
-  <canvas id="cv2" width="360" height="240"></canvas>
-  <canvas id="cv3" width="360" height="240"></canvas>
-  </div>b
-	<div class = "select-elements">
-	 <br><br>
-	<input type="button" value="背景" onclick="document.getElementById('haikei').style.display = 'block';">
 	
-　<div id = "haikei" style="display:none">
-	 <input type="button" value="戻る" onclick="document.getElementById('haikei').style.display = 'none';">
-	<input type="radio" name="el" value="entrance" onchange = "Haikeiselect()"> エントランス
-	<input type="radio" name="el" value="jimusho" onchange = "Haikeiselect()"> 事務所
-</div>
+	
+	<div class = "select-elements">
+	<br><br>
+		<input type="button" value="背景" onclick="document.getElementById('haikei').style.display = 'block';">
+	
+		<div id = "haikei" style="display:none">
+		<input type="button" value="戻る" onclick="document.getElementById('haikei').style.display = 'none';">
+		<input type="radio" name="el" value="entrance" onchange = "Haikeiselect()"> エントランス
+		<input type="radio" name="el" value="jimusho" onchange = "Haikeiselect()"> 事務所
+		</div>
+  	<br><br>
 		
-  <br><br>
-<form action="" name="textInput" id="serihu_form">
-            セリフ：<textarea rows="3" cols="60" id = "serihu">ここに記入してください</textarea>
-            <input type="button" value="決定" onclick="toDraw()" />
-  </form>
-</div>
+	<form action="" name="textInput" id="serihu_form">
+        セリフ：<textarea rows="3" cols="60" id = "serihu">ここに記入してください</textarea>
+        <input type="button" value="決定" onclick="toDraw()" />
+	</form>
+		
+		<div class="review-screen">
+  	<canvas id="cv" width="360" height="240"></canvas>
+  	<canvas id="cv2" width="360" height="240"></canvas>
+  	<canvas id="cv3" width="360" height="240"></canvas>
+ 	 </div>b
+		
+	</div>
   
 </body>
 </html>
