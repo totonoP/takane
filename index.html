@@ -18,6 +18,20 @@
 		<canvas id="cv3" width="360" height="240"></canvas>
 	</div>
 	
+	//背景を目印に着ける
+	<script type="text/javascript">
+		function init() {
+			// キャンバスを取り出す
+			var canvas = document.getElementById('cv');
+			// 2Dのコンテキストを取り出す
+			var ctx = canvas.getContext('2d');
+			// 指定の色で範囲内を塗りつぶす
+			ctx.fillStyle = 'rgb(255,0,255)';
+			ctx.fillRect(0, 0, 360, 240);
+		}
+	</script>
+	
+	
 	<div class = "select-elements"><br><br>
 		
 		<input type="button" value="背景" onclick="document.getElementById('haikei').style.display = 'block';">
