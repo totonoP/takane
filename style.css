@@ -1,7 +1,7 @@
-.canvas-wrapper {
+.review-screen {
     position: relative;
 }
-.canvas-wrapper canvas {
+.review-screen canvas {
     position: absolute;
     top: 0;
     left: 0;
