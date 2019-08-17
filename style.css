@@ -5,3 +5,7 @@
     position: absolute;
     
 }
+
+.select-elements {
+   position: static;
+}
