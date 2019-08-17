@@ -10,9 +10,19 @@ function toDraw() {
           
           }
 
-function SelectImage(imgname,cvnum) {
+function whichselect(name) {
+    var slct = document.getElementsByName(name);
+    for(var i = 0; i < slct.length; i++){
+      if(slct[i].checked) {
+        console.log("選択された値：", slct[i].value);
+                DrawImage();
+      }
+    }
+  }
+
+function DrawImage() {
   //2Dコンテキストのオブジェクトを生成する
-  var cvs = document.getElementById('cvnum');
+  var cvs = document.getElementById('cv');
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
