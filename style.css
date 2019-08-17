@@ -1,5 +1,5 @@
 .review-screen {
-    position: relative;
+    position:  absolute;
 }
 .review-screen canvas {
     position: absolute;
