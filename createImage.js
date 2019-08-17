@@ -1,5 +1,5 @@
 
-function toDraw() {
+function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv").getContext("2d");
 
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
@@ -10,7 +10,7 @@ function toDraw() {
           
           }
 
-function Haikeiselect() {
+function Haikeiselect() {//選択中の値を取得
     var slct = document.getElementsByName('el');
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
@@ -36,7 +36,7 @@ function DrawImage() {
 }
 
 
-function gousei(){
+function gousei(){//複数のキャンバスを合成
           var createImage= function(context){
             var image= new Image
             image.src= context.canvas.toDataURL()
