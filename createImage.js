@@ -15,7 +15,7 @@ function Haikeiselect() {//選択中の値を取得
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
         console.log("選択された値：", slct[i].value);
-               DrawImage(slct[i].value);
+               DrawImage('slct[i].value');
       }
     }
   }
@@ -28,12 +28,11 @@ function DrawImage(name) {
  
   //画像オブジェクトを生成
   var img = new Image();
-          if(slct[i].value == "entrance") {
-  img.src = "entrance.png";
-          }
+  img.src = 'name'+".png";
+          
   //画像をcanvasに設定
   img.onload = function(){
-    ctx.drawImage(img, 0, 0, 360, 240);  //400x300に縮小表示
+  ctx.drawImage(img, 0, 0, 360, 240);  //400x300に縮小表示
   }
 }
 
