@@ -12,23 +12,25 @@ function toDraw() {//文字を画像に描画
 
 function Haikeiselect() {//選択中の値を取得
     var slct = document.getElementsByName('el');
+          var ans;
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
         console.log("選択された値：", slct[i].value);
-               DrawImage(i);
+               ans = slct[i].value;
+               DrawImage(ans);
       }
     }
   }
 
 
-function DrawImage(num) {
+function DrawImage(name) {
   //2Dコンテキストのオブジェクトを生成する
   var cvs = document.getElementById('cv');
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
   var img = new Image();
-  img.src ="back"+num+".png";
+  img.src =name+".png";
           
   //画像をcanvasに設定
   img.onload = function(){
