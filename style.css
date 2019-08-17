@@ -1,8 +1,11 @@
-//.review-screen {
-   // position: relative;
-//}
+.review-screen {
+    position: relative;
+}
 .review-screen canvas {
     position: absolute;
     
+}
+.select-elements {
+   margin-top　500px;
 }
 
