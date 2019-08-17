@@ -1,5 +1,7 @@
 .review-screen {
     position:  relative;
+    width: 360px;
+    height: 240px; 
 }
 #cv {
     position: absolute;
@@ -17,6 +19,6 @@
     left: 0;
 }
 .select-elements {
-    margin-top 1000px;
+    margin-top 400px;
 }
 
