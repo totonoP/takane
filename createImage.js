@@ -15,7 +15,7 @@ function Haikeiselect() {
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
         console.log("選択された値：", slct[i].value);
-               document.write("Samurai");
+               
       }
     }
   }
