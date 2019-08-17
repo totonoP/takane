@@ -3,40 +3,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>貴音さんコミュジェネレータ</title>
-  <h2>貴音さんコミュジェネレータ</h2>
-  貴音さんとこみゅにけーしょんしたい。<br>
-	 <br><br>
-
-　<script type="text/javascript" src="createImage.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>貴音さんコミュジェネレータ</title>
+	 <h2>貴音さんコミュジェネレータ</h2>
+	 貴音さんとこみゅにけーしょんしたい。<br><br><br>
+	<script type="text/javascript" src="createImage.js"></script>
 </head>
 <body>
 	a
 	
 	
-	<div class = "select-elements">
-	<br><br>
-		<input type="button" value="背景" onclick="document.getElementById('haikei').style.display = 'block';">
-	
-		<div id = "haikei" style="display:none">
-		<input type="button" value="戻る" onclick="document.getElementById('haikei').style.display = 'none';">
-		<input type="radio" name="el" value="entrance" onchange = "Haikeiselect()"> エントランス
-		<input type="radio" name="el" value="jimusho" onchange = "Haikeiselect()"> 事務所
-		</div>
-  	<br><br>
+	<div class = "select-elements"><br><br>
 		
-	<form action="" name="textInput" id="serihu_form">
-        セリフ：<textarea rows="3" cols="60" id = "serihu">ここに記入してください</textarea>
-        <input type="button" value="決定" onclick="toDraw()" />
-	</form>
+		<input type="button" value="背景" onclick="document.getElementById('haikei').style.display = 'block';">
+			<div id = "haikei" style="display:none">
+				<input type="button" value="戻る" onclick="document.getElementById('haikei').style.display = 'none';">
+				<input type="radio" name="el" value="entrance" onchange = "Haikeiselect()"> エントランス
+				<input type="radio" name="el" value="jimusho" onchange = "Haikeiselect()"> 事務所
+			</div><br><br>
+		
+		<form action="" name="textInput" id="serihu_form">
+			セリフ：<textarea rows="3" cols="60" id = "serihu">ここに記入してください</textarea>
+			<input type="button" value="決定" onclick="toDraw()" />
+		</form>
 		
 		<div class="review-screen">
-  	<canvas id="cv" width="360" height="240"></canvas>
-  	<canvas id="cv2" width="360" height="240"></canvas>
-  	<canvas id="cv3" width="360" height="240"></canvas>
- 	 </div>b
+		<canvas id="cv" width="360" height="240"></canvas>
+		<canvas id="cv2" width="360" height="240"></canvas>
+		<canvas id="cv3" width="360" height="240"></canvas>
+		 </div>b
 		
 	</div>
   
