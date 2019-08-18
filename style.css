@@ -19,7 +19,7 @@
 }
 .select-elements {
 	float: left;
-	position: relative;
+	
 	overflow: hidden;
 	width: 500px;
 	height:300px;
