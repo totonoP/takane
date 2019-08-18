@@ -6,7 +6,7 @@
 .select-elements {
 	float: left;
 	overflow: hidden;
-	width: 500px;
+	width: 20%;
 	height:300px;
 }
 .select-elements input{
