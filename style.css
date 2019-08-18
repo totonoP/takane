@@ -1,9 +1,10 @@
-.sagyougamen class{
+.sagyougamen div{
 	display : table-cell;
 }
 
 
 .review-screen {
+	display : table-cell;
     position:  relative;
     width: 480px;
     height: 300px;
@@ -15,6 +16,7 @@
 }
 }
 .select-elements {
+	display : table-cell;
 	position: relative;
 	overflow: hidden;
 	width: 360px;
