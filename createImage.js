@@ -12,18 +12,30 @@ function toDraw() {//文字を画像に描画
 
 function whichselect(e) {//選択中の値を取得
           switch(e) {
-                    case 1:var slct = document.getElementsByName('e1');break;
-                    case 2:var slct = document.getElementsByName('e2');break;
+                    case 1:var slct = document.getElementsByName('e1');
+                               var ans;
+                                  for(var i = 0; i < slct.length; i++){
+                                    if(slct[i].checked) {
+                                      console.log("選択された値：", slct[i].value);
+                                             ans = slct[i].value;
+                                    }
+                                  }
+                              break;
+                              
+                    case 2:var slct2 = document.getElementsByName('e2');
+                                  var ans;
+                                  for(var i = 0; i < slct2.length; i++){
+                                    if(slct2[i].checked) {
+                                      console.log("選択された値：", slct2[i].value);
+                                             ans = slct2[i].value;
+                                    }
+                                  }
+                            break;
+                              
                     default:console.log("エラーです。");break;
                          }
-          var ans;
-    for(var i = 0; i < slct.length; i++){
-      if(slct[i].checked) {
-        console.log("選択された値：", slct[i].value);
-               ans = slct[i].value;
-               DrawImage(ans,e);
-      }
-    }
+          DrawImage(ans,e);
+
   }
 
 
