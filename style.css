@@ -13,7 +13,7 @@
     margin: 0 auto;
 }
 .review-screen canvas{
-    position:  absolute;
+    position: absolute;
    margin: 0 auto;
 }
 }
@@ -21,7 +21,7 @@
 	float: left;
 	position: relative;
 	overflow: hidden;
-	width: 360px;
+	width: 500px;
 	height:300px;
 }
 .select-elements input{
