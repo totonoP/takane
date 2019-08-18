@@ -15,7 +15,7 @@
 	width: 360px;
 	height:360px;
 }
-.select-elements {
+.select-elements input{
 	font-size: 20px;
 	position: absolute;
 	left: -95px;
