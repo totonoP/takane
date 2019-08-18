@@ -5,6 +5,7 @@
 }
 
 .review-screen {
+    float: left;
     clear: both;
     position:  relative;
     width: 480px;
@@ -17,7 +18,7 @@
 }
 }
 .select-elements {
-	//float: left;
+	float: left;
 	position: relative;
 	overflow: hidden;
 	width: 360px;
@@ -25,7 +26,7 @@
 }
 .select-elements input{
 	font-size: 20px;
-	//position: absolute;
+	position: absolute;
 	left: -95px;
 	width: 110px;
 	height: 54px;
