@@ -11,10 +11,8 @@ function toDraw() {//文字を画像に描画
           }
 
 function whichselect(e) {//選択中の値を取得
-          if(e == 1)
-          var slct = document.getElementsByName('e1');
-          else(e == 2)
-           var slct = document.getElementsByName('e2');
+          if(e == 1){var slct = document.getElementsByName('e1');}
+          else(e == 2){var slct = document.getElementsByName('e2');}
           var ans;
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
@@ -28,12 +26,8 @@ function whichselect(e) {//選択中の値を取得
 
 function DrawImage(name,n) {
   //2Dコンテキストのオブジェクトを生成する
-if(n == 1){
-  var cvs = document.getElementById('cv');
-}
-else(n == 2) {
-          var cvs = document.getElementById('cv2');
-}
+if(n == 1){var cvs = document.getElementById('cv');}
+else(n == 2){var cvs = document.getElementById('cv2');}
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
