@@ -6,7 +6,6 @@
 
 .select-elements {
 	float: left;
-	
 	overflow: hidden;
 	width: 500px;
 	height:300px;
@@ -37,7 +36,6 @@
 
 .review-screen {
     float: left;
-    clear: both;
     position:  relative;
     width: 480px;
     height: 300px;
