@@ -1,4 +1,4 @@
-.sagyougamen div{
+.sagyougamen class{
 	display : table-cell;
 }
 
@@ -18,7 +18,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 360px;
-	height:360px;
+	height:300px;
 }
 .select-elements input{
 	font-size: 20px;
