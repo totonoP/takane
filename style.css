@@ -4,19 +4,6 @@
    height: 100px;
 }
 
-.review-screen {
-    float: left;
-    clear: both;
-    position:  relative;
-    width: 480px;
-    height: 300px;
-    margin: 0 auto;
-}
-.review-screen canvas{
-    position: absolute;
-   margin: 0 auto;
-}
-}
 .select-elements {
 	float: left;
 	
@@ -47,6 +34,20 @@
 	top: 80px;
 	background-color: #1b2538;
 }
+
+.review-screen {
+    float: left;
+    clear: both;
+    position:  relative;
+    width: 480px;
+    height: 300px;
+    margin: 0 auto;
+}
+.review-screen canvas{
+    position: absolute;
+   margin: 0 auto;
+}
+
 #serihu_form {
 	clear: both;
 }
