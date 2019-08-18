@@ -14,7 +14,7 @@ function whichselect(e) {//選択中の値を取得
           switch(e) {
                     case 1:var slct = document.getElementsByName('e1');break;
                     case 2:var slct = document.getElementsByName('e2');break;
-                    case default:console.log("エラーです。");break;
+                    default:console.log("エラーです。");break;
                          }
           var ans;
     for(var i = 0; i < slct.length; i++){
@@ -32,7 +32,7 @@ function DrawImage(name,n) {
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
                     case 2:var cvs = document.getElementById('cv2');break;
-                    case default:console.log("エラーです。");break;
+                    default:console.log("エラーです。");break;
                }
   var ctx = cvs.getContext('2d');
  
