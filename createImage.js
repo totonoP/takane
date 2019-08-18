@@ -1,6 +1,6 @@
 
 function toDraw() {//文字を画像に描画
-          var ctx = document.getElementById("cv").getContext("2d");
+          var ctx = document.getElementById("cv3").getContext("2d");
 
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
           ctx.font = "20px Arial"; //フォントにArial,40px,斜体を指定
@@ -10,22 +10,30 @@ function toDraw() {//文字を画像に描画
           
           }
 
-function Haikeiselect() {//選択中の値を取得
-    var slct = document.getElementsByName('el');
+function whichselect(e) {//選択中の値を取得
+          if(e == 1)
+          var slct = document.getElementsByName('e1');
+          else(e == 2)
+           var slct = document.getElementsByName('e2');
           var ans;
     for(var i = 0; i < slct.length; i++){
       if(slct[i].checked) {
         console.log("選択された値：", slct[i].value);
                ans = slct[i].value;
-               DrawImage(ans);
+               DrawImage(ans,e);
       }
     }
   }
 
 
-function DrawImage(name) {
+function DrawImage(name,n) {
   //2Dコンテキストのオブジェクトを生成する
+if(n == 1){
   var cvs = document.getElementById('cv');
+}
+else(n == 2) {
+          var cvs = document.getElementById('cv2');
+}
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
