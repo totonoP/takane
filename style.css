@@ -1,12 +1,9 @@
 .first{
    position: relative;
    width: 480px;
-   height: 200px;
+   height: 100px;
 }
 
-.sagyougamen div{
-	display: table-cell;
-}
 .review-screen {
     display: table-cell;
     position:  relative;
