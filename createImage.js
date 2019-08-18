@@ -54,7 +54,7 @@ function DrawImage(name,n) {
           
   //画像をcanvasに設定
   img.onload = function(){
-  ctx.drawImage(img, 0, 0, 360, 240);  //400x300に縮小表示
+  ctx.drawImage(img, 0, 0, 960, 600);  //400x300に縮小表示
   }
 }
 
