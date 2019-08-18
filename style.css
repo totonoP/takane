@@ -1,7 +1,7 @@
 .review-screen {
     position:  relative;
-    width: 360px;
-    height: 240px; 
+    width: 1920px;
+    height: 1200px; 
 }
 .review-screen canvas{
     position:  absolute;
