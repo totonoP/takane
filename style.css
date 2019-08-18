@@ -5,27 +5,25 @@
 }
 
 .review-screen {
-    display: table-cell;
+    float: left;
     position:  relative;
     width: 480px;
     height: 300px;
     margin: 0 auto;
 }
 .review-screen canvas{
-	display: table-cell;
     position:  absolute;
    margin: 0 auto;
 }
 }
 .select-elements {
-	display: table-cell;
+	
 	position: relative;
 	overflow: hidden;
 	width: 360px;
 	height:300px;
 }
 .select-elements input{
-	display: table-cell;
 	font-size: 20px;
 	position: absolute;
 	left: -95px;
