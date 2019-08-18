@@ -10,6 +10,7 @@
     width: 480px;
     height: 300px;
     margin: 0 auto;
+	background-color: green;
 }
 .review-screen canvas{
     position:  absolute;
@@ -22,6 +23,7 @@
 	overflow: hidden;
 	width: 360px;
 	height:300px;
+	background-color: red;
 }
 .select-elements input{
 	font-size: 20px;
