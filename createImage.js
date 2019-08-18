@@ -3,8 +3,8 @@ function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv3").getContext("2d");
           ctx.clearRect(0, 0, 480, 300);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
-          ctx.font = "20px Arial"; //フォントにArial,40px,斜体を指定
-          ctx.fillStyle = "green"; //塗り潰し色を緑に
+          ctx.font = "10px Arial"; //フォントにArial,40px,斜体を指定
+          ctx.fillStyle = "white"; //塗り潰し色を緑に
 
           ctx.fillText(txt,10,50);      //テキストを塗り潰しで描画
           
