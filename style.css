@@ -1,11 +1,14 @@
 .first{
-   position:  relative;
+   position: relative;
+   width: 480px;
    height 200px;
 }
 
-
+.sagyougamen div{
+	display: table-cell;
+}
 .review-screen {
-	display : table-cell;
+    display: table-cell;
     position:  relative;
     width: 480px;
     height: 300px;
@@ -17,7 +20,7 @@
 }
 }
 .select-elements {
-	display : table-cell;
+	display: table-cell;
 	position: relative;
 	overflow: hidden;
 	width: 360px;
