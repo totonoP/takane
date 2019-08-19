@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<div class = "first">
+	<title>貴音さんコミュジェネレータ</title>
+	 <h2>貴音さんコミュジェネレータ</h2>
+	 貴音さんとこみゅにけーしょんしたい。<br><br><br>
+	</div>
+	<script type="text/javascript" src="createImage.js"></script>
+	
+</head>
+<body>
+
+	<div class="select-elements"><br><br>
+		
+		<input type="button" id="haikei" value="背景" onclick="document.getElementById('hk').style.display = 'block';">
+			
+		<input type="button" id="takane" value="貴音さん" onclick="document.getElementById('pose').style.display = 'block';">
+			
+		
+		
+	</div>
+	
+	<div class="review-screen">
+		<canvas id="cv" width="480" height="300"></canvas>
+		<canvas id="cv2" width="480" height="300"></canvas>
+		<canvas id="cv3" width="480" height="300"></canvas>
+		<canvas id="cv4" width="480" height="300"></canvas>
+	</div>
+	
+	<script>
+        
+            // キャンバスを取り出す
+            var canvas = document.getElementById('cv');
+            // 2Dのコンテキストを取り出す
+            var ctx = canvas.getContext('2d');
+            // 指定の色で範囲内を塗りつぶす
+            ctx.fillStyle = 'rgb(255,0,255)';
+            ctx.fillRect(0, 0, 480, 300);
+       
+    </script>
+
+	<div id = "hk" style="display:none">
+				<input type="button" value="戻る" onclick="document.getElementById('hk').style.display = 'none';">
+				<input type="radio" name="e1" value="entrance" onchange = "whichselect(1)"> エントランス
+				<input type="radio" name="e1" value="jimusho" onchange = "whichselect(1)"> 事務所
+			</div><br>
+	
+	<div id = "pose" style="display:none">
+				<input type="button" value="戻る" onclick="document.getElementById('pose').style.display = 'none';">
+				<input type="radio" name="e2" value="pose1" onchange = "whichselect(2)"> ポーズ１
+				<input type="radio" name="e2" value="pose2" onchange = "whichselect(2)"> ポーズ２
+			</div>
+	
+	<form action="" name="textInput" id="serihu_form">
+		<br>
+			セリフ：<textarea rows="3" cols="60" id = "serihu">面妖な！</textarea>
+			<input type="button" value="決定" onclick="toDraw()" />
+		</form>
+  
+</body>
+</html>
