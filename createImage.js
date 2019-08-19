@@ -6,7 +6,7 @@ function toDraw() {//文字を画像に描画
           ctx.font = "10px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
 
-          ctx.fillText(txt,10,50);      //テキストを塗り潰しで描画
+          ctx.fillText(txt,10,200);      //テキストを塗り潰しで描画
           
           }
 
