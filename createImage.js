@@ -1,5 +1,6 @@
 
 function toDraw() {//文字を画像に描画
+           DrawImage("serihu",3);
           var ctx = document.getElementById("cv3").getContext("2d");
           ctx.clearRect(0, 0, 480, 300);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
@@ -44,13 +45,14 @@ function DrawImage(name,n) {
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
                     case 2:var cvs = document.getElementById('cv2');break;
+                    case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
   var ctx = cvs.getContext('2d');
  
   //画像オブジェクトを生成
   var img = new Image();
-  img.src =name+".png";
+  img.src ="img/"+name+".png";
           
   //画像をcanvasに設定
   img.onload = function(){
