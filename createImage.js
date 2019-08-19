@@ -1,8 +1,7 @@
 
 function toDraw() {//文字を画像に描画
-           DrawImage("serihu",3);
-          var ctx = document.getElementById("cv3").getContext("2d");
-          ctx.clearRect(0, 360, 120, 300);
+          var ctx = document.getElementById("cv4").getContext("2d");
+          ctx.clearRect(0, 200, 480, 100);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
           ctx.font = "10px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
