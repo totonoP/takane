@@ -50,7 +50,7 @@ function DrawImage(name,n,t) {
                     case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
-  var ctx = cvs.getContext('2d');
+  var ctx = cvs.getContext("2d");
            ctx.globalAlpha = t;
   //画像オブジェクトを生成
   var img = new Image();
