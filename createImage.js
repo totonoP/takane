@@ -6,9 +6,9 @@ function toDraw() {//文字を画像に描画
           ctx.clearRect(0, 800, 1920, 400);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
           var txt2 = document.forms.serihu_form.dare.value;
-          ctx.font = "bold 40px Arial"; //フォントにArial,40px,斜体を指定
+          ctx.font = "bold 50px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
-          ctx.fillText(txt2,300,900);
+          ctx.fillText(txt2,300,910);
           ctx.fillText(txt,300,1000);      //テキストを塗り潰しで描画
           
           }
