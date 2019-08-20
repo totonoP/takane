@@ -1,4 +1,6 @@
 
+DrawImage("serihu",3,0.3);
+
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
           ctx.clearRect(0, 200, 480, 100);
