@@ -5,10 +5,10 @@ function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
           ctx.clearRect(0, 200, 480, 100);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
-          ctx.font = "10px Arial"; //フォントにArial,40px,斜体を指定
+          ctx.font = "bold 10px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
 
-          ctx.fillText(txt,70,250);      //テキストを塗り潰しで描画
+          ctx.fillText(txt,75,250);      //テキストを塗り潰しで描画
           
           }
 
