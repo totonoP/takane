@@ -1,5 +1,5 @@
 
-DrawImage("serihu",3,0.3);
+
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
@@ -48,8 +48,8 @@ function DrawImage(name,n,t) {
                     case 1:var cvs = document.getElementById('cv');break;
                     case 2:var cvs = document.getElementById('cv2');break;
                     case 3:var cvs = document.getElementById('cv3');
-                           var context = cvs.getContext('2d');
-                              context.globalAlpha = 0.5;
+                           var ctx = cvs.getContext('2d');
+                              ctx.globalAlpha = 0.5;
                               break;
                     default:console.log("エラーです。");break;
                }
@@ -88,3 +88,5 @@ function gousei(){//複数のキャンバスを合成
 
           document.body.appendChild(createImage(takanekomyu))
 }
+
+DrawImage("serihu",3,0.3);
