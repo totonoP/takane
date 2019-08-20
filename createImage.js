@@ -36,12 +36,12 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,e,1);
+          DrawImage(ans,e);
 
   }
 
 
-function DrawImage(name,n,t) {
+function DrawImage(name,n {
            
   //2Dコンテキストのオブジェクトを生成する
           switch(n){
@@ -89,4 +89,3 @@ function gousei(){//複数のキャンバスを合成
           document.body.appendChild(createImage(takanekomyu))
 }
 
-//DrawImage("serihu",3,0.3);
