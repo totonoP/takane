@@ -50,16 +50,16 @@ function DrawImage(name,n,t) {
                     case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
-  var ctx = cvs.getContext("2d");
-           ctx.globalAlpha = t;
-  //画像オブジェクトを生成
-  var img = new Image();
-  img.src ="img/"+name+".png";
-          
-  //画像をcanvasに設定
-  img.onload = function(){
-  ctx.drawImage(img, 0, 0, 480, 300);  //400x300に縮小表示
-  }
+            var ctxt = cvs.getContext('2d');
+                     ctx.globalAlpha = t;
+            //画像オブジェクトを生成
+            var img = new Image();
+            img.src ="img/"+name+".png";
+
+            //画像をcanvasに設定
+            img.onload = function(){
+            ctx.drawImage(img, 0, 0, 480, 300);  //400x300に縮小表示
+            }
 }
 
 
