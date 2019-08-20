@@ -47,11 +47,13 @@ function DrawImage(name,n,t) {
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
                     case 2:var cvs = document.getElementById('cv2');break;
-                    case 3:var cvs = document.getElementById('cv3');break;
+                    case 3:var cvs = document.getElementById('cv3');
+                           var context = cvs.getContext('2d');
+                              context.globalAlpha = 0.5;
+                              break;
                     default:console.log("エラーです。");break;
                }
-            var ctxt = cvs.getContext('2d');
-                     ctx.globalAlpha = t;
+            
             //画像オブジェクトを生成
             var img = new Image();
             img.src ="img/"+name+".png";
