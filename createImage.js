@@ -89,4 +89,4 @@ function gousei(){//複数のキャンバスを合成
           document.body.appendChild(createImage(takanekomyu))
 }
 
-DrawImage("serihu",3,0.3);
+//DrawImage("serihu",3,0.3);
