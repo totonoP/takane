@@ -36,24 +36,22 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,e);
+          DrawImage(ans,e,1);
 
   }
 
 
-function DrawImage(name,n) {
+function DrawImage(name,n,t) {
            
   //2Dコンテキストのオブジェクトを生成する
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
                     case 2:var cvs = document.getElementById('cv2');break;
-                    case 3:var cvs = document.getElementById('cv3');
-                           var ctx = cvs.getContext('2d');
-                              ctx.globalAlpha = 0.5;
-                              break;
+                    case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
-            
+            var ctx = cvs.getContext('2d');
+            ctx.globalAlpha = t;
             //画像オブジェクトを生成
             var img = new Image();
             img.src ="img/"+name+".png";
