@@ -41,7 +41,7 @@ function whichselect(e) {//選択中の値を取得
   }
 
 
-function DrawImage(name,n {
+function DrawImage(name,n) {
            
   //2Dコンテキストのオブジェクトを生成する
           switch(n){
