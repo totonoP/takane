@@ -3,7 +3,7 @@
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
-          ctx.clearRect(350, 800, 1000,00);
+          ctx.clearRect(350, 800, 1000,500);
           var txt = document.forms.serihu_form.serihu.value; //描画する文字
           var txt2 = document.forms.serihu_form.dare.value;
           ctx.font = "bold 50px Arial"; //フォントにArial,40px,斜体を指定
