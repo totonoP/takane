@@ -47,7 +47,7 @@ function DrawImage(name,n,t) {
   //2Dコンテキストのオブジェクトを生成する
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
-                    case 2:var cvs = document.getElementById('cv2');break;
+                    case 2:var cvs = document.getElementById('cv2');ctx.clearRect(0, 0, 1920, 1080);break;
                     case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
@@ -56,7 +56,7 @@ function DrawImage(name,n,t) {
             //画像オブジェクトを生成
             var img = new Image();
             img.src ="img/"+name+".png";
-          ctx.clearRect(0, 0, 1920, 1080);
+          
             //画像をcanvasに設定
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
