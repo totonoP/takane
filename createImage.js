@@ -15,7 +15,7 @@ function toDraw() {//文字を画像に描画
     var strArray = [];
     var tmp = "";
     var i = 0;
-
+    var l;
     if( len < 1 ){
         //textの文字数が0だったら終わり
         return strArray;
@@ -45,10 +45,6 @@ function toDraw() {//文字を画像に描画
     /* 繋げたままの分があれば回収 */
     if( tmp.length > 0 )
         strArray.push( tmp );
-
-    return strArray;
-}
-	
 	
           
           for( i=0, l=strArray.length; l>i; i++ ) {
