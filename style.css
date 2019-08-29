@@ -36,8 +36,7 @@
 .review-screen {
     float: left;
     position:  relative;
-    width: 480px;
-    height: 270px;
+
     margin: 0 auto;
 }
 .review-screen canvas{
