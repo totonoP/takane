@@ -8,8 +8,8 @@ function toDraw() {//文字を画像に描画
           var txt2 = document.forms.serihu_form.dare.value;
           ctx.font = "bold 50px Arial"; //フォントにArial,40px,斜体を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
-          ctx.fillText(txt2,350,860);
-          ctx.fillText(txt,350,940);      //テキストを塗り潰しで描画
+          ctx.fillText(txt2,350,840);
+          ctx.fillText(txt,350,920);      //テキストを塗り潰しで描画
           
           }
 
