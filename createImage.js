@@ -56,7 +56,7 @@ function DrawImage(name,n,t) {
             //画像オブジェクトを生成
             var img = new Image();
             img.src ="img/"+name+".png";
-
+          ctx.clearRect(0, 0, 480, 270);
             //画像をcanvasに設定
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1200);  //400x300に縮小表示
