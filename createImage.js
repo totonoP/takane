@@ -13,7 +13,7 @@ function toDraw() {//文字を画像に描画
           
           for( var lines=txt.split( " " ), i=0, l=lines.length; l>i; i++ ) {
 	var line = lines[i];
-          var addY = 850;
+          var addY = 890;
                     
 	if ( i ) addY += fontsize * 10 * i ;
 
