@@ -15,7 +15,7 @@ function toDraw() {//文字を画像に描画
 	var line = lines[i];
           var addY = fontsize;
                     
-	if ( i ) addY += fontsize * 10 * i +920;
+	if ( i ) addY += fontsize * 10 * i +850;
 
 	ctx.fillText( line, 350,addY );
 	  }     //テキストを塗り潰しで描画
