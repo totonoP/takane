@@ -4,11 +4,21 @@
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
           ctx.clearRect(350, 800, 1000,500);
-          var txt = document.forms.serihu_form.serihu.value; //描画する文字
-          var txt2 = document.forms.serihu_form.dare.value;
-          ctx.font = "bold 50px Arial"; //フォントにArial,40px,斜体を指定
+          var fontsize = 50;
+          var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
+          var txt2 = document.forms.serihu_form.dare.value;//話者の名前
+          ctx.font = "bold 50px Arial"; //フォントにArial,40px,太字を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
           ctx.fillText(txt2,350,840);
+          
+          for( var lines=text.split( "\n" ), i=0, l=lines.length; l>i; i++ ) {
+	var line = lines[i];
+          var addY = fontsize;
+                    
+	if ( i ) addY += fontsize * 10 * i ;
+
+	ctx.fillText( line, 350 + 0, 920 + addY ) ;
+}
           ctx.fillText(txt,350,920);      //テキストを塗り潰しで描画
           
           }
