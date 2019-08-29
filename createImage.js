@@ -32,7 +32,7 @@ function toDraw() {//文字を画像に描画
         }
 
         /* contextの現在のフォントスタイルで描画したときの長さを取得 */
-        if (ctx.measureText( tmp + c ).width <= 10){
+        if (ctx.measureText( tmp + c ).width <= 500){
             /* 指定幅を超えるまでは文字列を繋げていく */
             tmp += c;
         }else{
