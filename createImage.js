@@ -3,7 +3,7 @@
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
-          ctx.clearRect(350, 800, 1000,500);
+          ctx.clearRect(350, 800, 1200,500);
           var fontsize = 50;
           var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
           var txt2 = document.forms.serihu_form.dare.value;//話者の名前
