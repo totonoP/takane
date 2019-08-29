@@ -11,7 +11,7 @@ function toDraw() {//文字を画像に描画
           ctx.fillStyle = "white"; //塗り潰し色を緑に
           ctx.fillText(txt2,350,840);
           
-          for( var lines=text.split( "\n" ), i=0, l=lines.length; l>i; i++ ) {
+          for( var lines=txt.split( "\n" ), i=0, l=lines.length; l>i; i++ ) {
 	var line = lines[i];
           var addY = fontsize;
                     
