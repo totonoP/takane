@@ -47,11 +47,12 @@ function DrawImage(name,n,t) {
   //2Dコンテキストのオブジェクトを生成する
           switch(n){
                     case 1:var cvs = document.getElementById('cv');break;
-                    case 2:var cvs = document.getElementById('cv2');ctx.clearRect(0, 0, 1920, 1080);break;
+                    case 2:var cvs = document.getElementById('cv2');break;
                     case 3:var cvs = document.getElementById('cv3');break;
                     default:console.log("エラーです。");break;
                }
             var ctx = cvs.getContext('2d');
+          ctx.clearRect(0, 0, 1920, 1080);
             ctx.globalAlpha = t;
             //画像オブジェクトを生成
             var img = new Image();
