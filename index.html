@@ -26,33 +26,30 @@
 	</div>
 	
 	<div class="review-screen">
-		<canvas id="resultImage" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
 		<canvas id="cv" width="1920px" height="1080px" style="background-color:black; width:480px;height:270px;"></canvas>
-		<canvas id="cv2" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
-		<canvas id="cv3" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
-		<canvas id="cv4" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
+		
 	</div>
 <script>DrawImage("serihu",3,0.7);</script>
 	<div id = "hk" style="display:none">
 				<input type="button" value="戻る" onclick="document.getElementById('hk').style.display = 'none';">
-				<input type="radio" name="e1" value="entrance" onchange = "whichselect(1)"　checked> エントランス
-				<input type="radio" name="e1" value="jimusho" onchange = "whichselect(1)"> 事務所
+				<input type="radio" name="e1" value="entrance" onchange = "saibyouga()"　checked> エントランス
+				<input type="radio" name="e1" value="jimusho" onchange = "saibyouga()"> 事務所
 			</div><br>
 	
 	<div id = "pose" style="display:none">
 				<input type="button" value="戻る" onclick="document.getElementById('pose').style.display = 'none';">
-				<input type="radio" name="e2" value="pose01" onchange = "whichselect(2)"> ポーズ１
-				<input type="radio" name="e2" value="pose2" onchange = "whichselect(2)"> ポーズ２
+				<input type="radio" name="e2" value="pose01" onchange = "saibyouga()"> ポーズ１
+				<input type="radio" name="e2" value="pose2" onchange = "saibyouga()"> ポーズ２
 			</div>
 	
 	<form action="" name="textInput" id="serihu_form">
 		<br>
 			名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
 			セリフ：<textarea rows="3" cols="50" id = "serihu">面妖な！</textarea>
-			<input type="button" value="決定" onclick="toDraw()" />
-			<input type="button" value="ダウンロード" onclick="gousei('resultImage',['cv','cv2','cv3'])">
+			<input type="button" value="決定" onclick="saibyouga()" />
+			<input type="button" value="ダウンロード" onclick="gousei()">
 			<a id="download_link"></a>
-			<input type="button" value="すべてクリア" onclick="eraseCanvas(['cv','cv2','cv4'])">
+			<input type="button" value="すべてクリア">
 		</form>
   <img src="" id="result" />
 </body>
