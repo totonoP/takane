@@ -115,7 +115,7 @@ function DrawImage(name,n,t) {
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
 	 
-  for(let i = 0;i < asset.length;i++){
+  for(var i = 0;i < asset.length;i++){
 // 	 console.log(asset[i]);
    	   var cnvs = document.getElementById(asset[i]);
 	  var cntxt = cnvs.getContext("2d");
