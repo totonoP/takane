@@ -108,23 +108,19 @@ function DrawImage(name,n,t) {
 /**
  * Canvas合成
  */
- function gousei(base,asset){
-  var cvs = document.getElementById(base);
+ function gousei(){
+  var cvs = document.getElementById('resultImage');
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
 
-  for(let i = 0;i < asset.length;i++){
-   	  const cnvs = document.getElementById(asset[i]);
+   	  const cnvs = document.getElementById('cv');
 	  const cntxt = cnvs.getContext("2d");
-	  var image = cntxt.getImageData(0, 0, cnvs.width, cnvs.height);
-			cvs.getContext('2d').putImageData(image, 0, 0);
-// 	  var image= new Image();
-// 	  image.src= cntxt.canvas.toDataURL();
-// 	  console.log(image);
-// 	  image.onload = function(){
-// 	  ctx.drawImage(image, 0, 0, 1920, 1080);
-// 	  }
-	}
+ 	  var image[i] = new Image();
+ 	  image.src= cntxt.canvas.toDataURL();
+ 	  image.onload = function(){
+ 	  ctx.drawImage(image, 0, 0, 1920, 1080);
+ 	  }
+	
 	 
   if (cvs.msToBlob) {
       var blob = cvs.msToBlob();
