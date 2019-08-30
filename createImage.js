@@ -115,14 +115,14 @@ function DrawImage(name,n,t) {
   var ctx = document.getElementById("resultImage").getContext("2d");
   var downloadLink = document.getElementById('download_link');
 
-  for(let i=0; i<asset.length; i++){
-    var cvs = document.getElementById(asset[i]);
-    var png = cvs.toDataURL();
-    var img = new Image();
-    img.src = png;
-    ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
-	  
-  }
+  html2canvas(document.getElementById("review-screen"),{
+    onrendered: function(canvas){
+      //imgタグのsrcの中に、html2canvasがレンダリングした画像を指定する。
+      var imgData = canvas.toDataURL();
+      document.getElementById("result").src = imgData;
+    }
+  });
+	 
   if (canvas.msToBlob) {
       var blob = canvas.msToBlob();
       window.navigator.msSaveBlob(blob, 'takane.png');
