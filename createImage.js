@@ -61,7 +61,7 @@ function whichselect(e) {//選択中の値を取得
                                var ans;
                                   for(var i = 0; i < slct.length; i++){
                                     if(slct[i].checked) {
-                                      console.log("選択された値：", slct[i].value);
+                                      
                                              ans = slct[i].value;
                                     }
                                   }
@@ -71,7 +71,7 @@ function whichselect(e) {//選択中の値を取得
                                   var ans;
                                   for(var i = 0; i < slct2.length; i++){
                                     if(slct2[i].checked) {
-                                      console.log("選択された値：", slct2[i].value);
+                                      
                                              ans = slct2[i].value;
                                     }
                                   }
@@ -111,13 +111,13 @@ function DrawImage(name,n,t) {
  * Canvas合成
  */
  function gousei(base,asset){
-  var cvs = document.getElementById("resultImage");
+  var cvs = document.getElementById(base);
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
 	 
   for(let i = 0;i < asset.length;i++){
+	 console.log("ｓ");
   	   var canvas = document.getElementById(asset[i]);
-  	   const cntxt = canvas.getContext('2d');
 	   var img = new Image();
 	  img.src = canvas.toDataURL();
 	  img.onload = function(){
