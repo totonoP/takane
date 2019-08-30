@@ -12,6 +12,7 @@ function toDraw() {//文字を画像に描画
           var fontsize = 50;
           var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
           var txt2 = document.forms.serihu_form.dare.value;//話者の名前
+	ctx.globalAlpha = 1;
           ctx.font = "bold 50px Arial"; //フォントにArial,40px,太字を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
           ctx.fillText(txt2,350,840);
@@ -84,7 +85,7 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,1);
+          DrawImage(ans,10);
 
   }
 
