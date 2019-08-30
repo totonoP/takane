@@ -85,7 +85,7 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,10);
+          DrawImage(ans,1);
 
   }
 
