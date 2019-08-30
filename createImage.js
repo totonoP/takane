@@ -2,7 +2,7 @@
 function saibyouga() {
 whichselect(1);
 whichselect(2);
-DrawImage("serihu",3,0.7);
+DrawImage("serihu",0.7);
 toDraw();
 }
 
@@ -84,7 +84,7 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,e,1);
+          DrawImage(ans,1);
 
   }
 
