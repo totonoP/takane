@@ -116,12 +116,14 @@ function DrawImage(name,n,t) {
   for(let i = 0;i < asset.length;i++){
    	  const cnvs = document.getElementById(asset[i]);
 	  const cntxt = cnvs.getContext("2d");
-	  var image= new Image();
-	  image.src= cntxt.canvas.toDataURL();
-	  console.log(image);
-	  image.onload = function(){
-	  ctx.drawImage(image, 0, 0, 1920, 1080);
-	  }
+	  var image = cntxt.getImageData(0, 0, cnvs.width, cnvs.height);
+			cvs.getContext('2d').putImageData(image, 0, 0);
+// 	  var image= new Image();
+// 	  image.src= cntxt.canvas.toDataURL();
+// 	  console.log(image);
+// 	  image.onload = function(){
+// 	  ctx.drawImage(image, 0, 0, 1920, 1080);
+// 	  }
 	}
 	 
   if (cvs.msToBlob) {
