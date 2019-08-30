@@ -110,7 +110,7 @@ function DrawImage(name,n,t) {
 /**
  * Canvas合成
  */
- function gousei(base, asset){
+ function gousei(base){
   
   var ctx = document.getElementById("resultImage").getContext("2d");
   var downloadLink = document.getElementById('download_link');
