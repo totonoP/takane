@@ -1,18 +1,10 @@
 
-function saibyouga() {
-whichselect(1);
-if(whichselect(1)==1)whichselect(2);
-if(whichselect(2)==1)DrawImage("serihu",0.7);
-if(DrawImage("serihu",0.7)==1)toDraw();
-}
-
 function toDraw() {//文字を画像に描画
-          var ctx = document.getElementById("cv").getContext("2d");
+          var ctx = document.getElementById("cv4").getContext("2d");
           ctx.clearRect(350, 800, 1200,500);
           var fontsize = 50;
           var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
           var txt2 = document.forms.serihu_form.dare.value;//話者の名前
-	ctx.globalAlpha = 1;
           ctx.font = "bold 50px Arial"; //フォントにArial,40px,太字を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
           ctx.fillText(txt2,350,840);
@@ -59,7 +51,6 @@ function toDraw() {//文字を画像に描画
 
 	ctx.fillText( line, 350,addY );
 	  }     //テキストを塗り潰しで描画
-	return 1;
           }
 
 function whichselect(e) {//選択中の値を取得
@@ -86,16 +77,20 @@ function whichselect(e) {//選択中の値を取得
                               
                     default:console.log("エラーです。");break;
                          }
-          DrawImage(ans,1);
-return 1;
+          DrawImage(ans,e,1);
+
   }
 
 
-function DrawImage(name,t) {
+function DrawImage(name,n,t) {
            
   //2Dコンテキストのオブジェクトを生成する
-         
-            var cvs = document.getElementById('cv');
+          switch(n){
+                    case 1:var cvs = document.getElementById('cv');break;
+                    case 2:var cvs = document.getElementById('cv2');break;
+                    case 3:var cvs = document.getElementById('cv3');break;
+                    default:console.log("エラーです。");break;
+               }
             var ctx = cvs.getContext('2d');
           ctx.clearRect(0, 0, 1920, 1080);
             ctx.globalAlpha = t;
@@ -107,17 +102,28 @@ function DrawImage(name,t) {
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
             }
-	return 1;
 }
 
 
 /**
  * Canvas合成
  */
- function gousei(){
-  var cvs = document.getElementById('cv');
+ function gousei(base,asset){
+  var cvs = document.getElementById(base);
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
+
+  for(let i = 0;i < asset.length;i++){
+// 	 console.log(asset[i]);
+   	   const cnvs = document.getElementById(asset[i]);
+	  const cntxt = cnvs.getContext("2d");
+// 	   var img = new Image();
+// 	  img.src = cnvs.toDataURL();
+//             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+	  var image = cntxt.getImageData(0, 0, cnvs.width, cnvs.height);
+	  console.log(image);
+	  cvs.getContext('2d').putImageData(image, 0, 0);
+	}
 	 
   if (cvs.msToBlob) {
       var blob = cvs.msToBlob();
@@ -135,12 +141,10 @@ function DrawImage(name,t) {
  * @param {string} target 対象canvasのid
  * @return {void}
  */
-function eraseCanvas(){
-  const canvas = document.getElementById('cv');
+function eraseCanvas(target){
+	for(let i = 0;i < target.length;i++){
+  const canvas = document.getElementById(target[i]);
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-	DrawImage("serihu",3,0.7);
 	}
-
-
-
+}
