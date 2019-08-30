@@ -116,23 +116,19 @@ var downloadLink = document.getElementById('download_link');
     const image1 = await getImagefromCanvas(asset[i]);
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   }
-	 await downloadCanvas(canvas);
+	   if (canvas.msToBlob) {
+    var blob = canvas.msToBlob();
+    window.navigator.msSaveBlob(blob, "takane.png");
+} else {
+    downloadLink.href = canvas.toDataURL('image/png');
+    downloadLink.download = "takane.png";
+    downloadLink.click();
+}
     
 }
 
 
-function downloadCanvas(can){
-  return new Promise((resolve, reject) => {
-     if (can.msToBlob) {
-    var blob = can.msToBlob();
-    window.navigator.msSaveBlob(blob, "takane.png");
-} else {
-    downloadLink.href = can.toDataURL('image/png');
-    downloadLink.download = "takane.png";
-    downloadLink.click();
-}
-  });
-}
+
 /**
  * Canvasを画像として取得
  *
