@@ -142,7 +142,7 @@ var downloadLink = document.getElementById('download_link');
 function eraseCanvas(target){
 	for(let i = 0;i < target.length;i++){
   const canvas = document.querySelector(target[i]);
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
 }
