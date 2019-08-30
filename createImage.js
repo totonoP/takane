@@ -109,28 +109,28 @@ function DrawImage(name,n,t) {
 
 /**
  * Canvas合成
- *
- * @param {string} base 合成結果を描画するcanvas(id)
- * @param {array} asset 合成する素材canvas(id)
- * @return {void}
  */
- async function concatCanvas(base, asset){
-  const canvas = document.getElementById(base);
-  const ctx = canvas.getContext('2d');
-var downloadLink = document.getElementById('download_link');
+ function gousei(base, asset){
+  
+  var ctx = document.getElementById("resultImage").getContext("2d");
+  var downloadLink = document.getElementById('download_link');
 
   for(let i=0; i<asset.length; i++){
-    const image1 = await getImagefromCanvas(asset[i]);
-    ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+    var cvs = document.getElementById(asset[i]);
+    var png = cvs.toDataURL();
+    var img = new Image();
+    img.src = png;
+    ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+	  
   }
-	 if (canvas.msToBlob) {
-                var blob = canvas.msToBlob();
-                window.navigator.msSaveBlob(blob, 'takane.png');
-            } else {
-                downloadLink.href = canvas.toDataURL('image/png');
-                downloadLink.download = 'takane.png';
-                downloadLink.click();
-            }
+  if (canvas.msToBlob) {
+      var blob = canvas.msToBlob();
+      window.navigator.msSaveBlob(blob, 'takane.png');
+  } else {
+      downloadLink.href = canvas.toDataURL('image/png');
+      downloadLink.download = 'takane.png';
+      downloadLink.click();
+  }
 }
 
 /**
@@ -147,18 +147,4 @@ function eraseCanvas(target){
 	}
 }
 
-/**
- * Canvasを画像として取得
- *
- * @param {string} id  対象canvasのid
- * @return {object}
- */
-function getImagefromCanvas(id){
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    const ctx = document.querySelector(id).getContext("2d");
-    image.onload = () => resolve(image);
-    image.onerror = (e) => reject(e);
-    image.src = ctx.canvas.toDataURL();
-  });
-}
+
