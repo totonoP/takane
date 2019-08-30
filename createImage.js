@@ -108,13 +108,6 @@ function DrawImage(name,n,t) {
 /**
  * Canvas合成
  */
- /**
- * Canvas合成
- *
- * @param {string} base 合成結果を描画するcanvas(id)
- * @param {array} asset 合成する素材canvas(id)
- * @return {void}
- */
  async function concatCanvas(base, asset){
   const canvas = document.querySelector(base);
   const ctx = canvas.getContext("2d");
@@ -123,6 +116,11 @@ function DrawImage(name,n,t) {
     const image1 = await getImagefromCanvas(asset[i]);
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   }
+
+    let link = document.createElement("a");
+    link.href = canvas.toDataURL("image/png");
+    link.download = "takane.png";
+    link.click();
 }
 
 
