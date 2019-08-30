@@ -119,7 +119,7 @@ var downloadLink = document.getElementById('download_link');
 
     if (canvas.msToBlob) {
     var blob = canvas.msToBlob();
-    window.navigator.msSaveBlob(blob, filename);
+    window.navigator.msSaveBlob(blob, "takane.png");
 } else {
     downloadLink.href = canvas.toDataURL('image/png');
     downloadLink.download = "takane.png";
