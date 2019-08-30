@@ -116,7 +116,7 @@ function DrawImage(name,n,t) {
   var downloadLink = document.getElementById('download_link');
 	 
   for(let i = 0;i < asset.length;i++){
-	 console.log("ｓ");
+	 console.log(asset[i]);
   	   var canvas = document.getElementById(asset[i]);
 	   var img = new Image();
 	  img.src = canvas.toDataURL();
