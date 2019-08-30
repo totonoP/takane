@@ -117,9 +117,9 @@ function DrawImage(name,n,t) {
 	 
   for(let i = 0;i < asset.length;i++){
 	 console.log(asset[i]);
-  	   var canvas = document.getElementById(asset[i]);
+  	   var cnvs = document.getElementById(asset[i]);
 	   var img = new Image();
-	  img.src = canvas.toDataURL();
+	  img.src = cnvs.toDataURL();
 	  img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
             }
