@@ -114,11 +114,11 @@ function DrawImage(name,n,t) {
   var cvs = document.getElementById(base);
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
-	 
-  for(var i = 0;i < asset.length;i++){
+
+  for(let i = 0;i < asset.length;i++){
 // 	 console.log(asset[i]);
-   	   var cnvs = document.getElementById(asset[i]);
-	  var cntxt = cnvs.getContext("2d");
+   	   const cnvs = document.getElementById(asset[i]);
+	  const cntxt = cnvs.getContext("2d");
 // 	   var img = new Image();
 // 	  img.src = cnvs.toDataURL();
 //             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
