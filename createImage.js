@@ -107,27 +107,58 @@ function DrawImage(name,n,t) {
 }
 
 
-function gousei(){//複数のキャンバスを合成
-          var createImage= function(context){
-            var image= new Image
-            image.src= context.canvas.toDataURL()
-            return image
-          }
+/**
+ * Canvas合成
+ *
+ * @param {string} base 合成結果を描画するcanvas(id)
+ * @param {array} asset 合成する素材canvas(id)
+ * @return {void}
+ */
+ async function concatCanvas(base, asset){
+  const canvas = document.querySelector(base);
+  const ctx = canvas.getContext("2d");
+var downloadLink = document.getElementById('download_link');
 
-          var haikei= document.createElement('canvas').getContext('2d')
-          context1.fillText('foo',0,10)
-
-          var takane= document.createElement('canvas').getContext('2d')
-          context2.fillText('bar',0,20)
-
-          var serihu= document.createElement('canvas').getContext('2d')
-          context3.fillText('baz',0,30)
-
-          var takanekomyu = document.createElement('canvas').getContext('2d')
-          context4.drawImage(createImage(haikei),0,0)
-          context4.drawImage(createImage(takane),0,0)
-          context4.drawImage(createImage(serihu),0,0)
-
-          document.body.appendChild(createImage(takanekomyu))
+  for(let i=0; i<asset.length; i++){
+    const image1 = await getImagefromCanvas(asset[i]);
+    ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+  }
+	 if (canvas.msToBlob) {
+                var blob = canvas.msToBlob();
+                window.navigator.msSaveBlob(blob, 'takane.png');
+            } else {
+                downloadLink.href = canvas.toDataURL('image/png');
+                downloadLink.download = 'takane.png';
+                downloadLink.click();
+            }
 }
 
+/**
+ * Canvasをすべて削除する
+ *
+ * @param {string} target 対象canvasのid
+ * @return {void}
+ */
+function eraseCanvas(target){
+	for(let i = 0;i < target.length;i++){
+  const canvas = document.querySelector(target[i]);
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+	}
+}
+
+/**
+ * Canvasを画像として取得
+ *
+ * @param {string} id  対象canvasのid
+ * @return {object}
+ */
+function getImagefromCanvas(id){
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    const ctx = document.querySelector(id).getContext("2d");
+    image.onload = () => resolve(image);
+    image.onerror = (e) => reject(e);
+    image.src = ctx.canvas.toDataURL();
+  });
+}
