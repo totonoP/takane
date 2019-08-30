@@ -1,9 +1,9 @@
 
 function saibyouga() {
 whichselect(1);
-whichselect(2);
-DrawImage("serihu",0.7);
-toDraw();
+if(whichselect(1)==1)whichselect(2);
+if(whichselect(2)==1)DrawImage("serihu",0.7);
+if(DrawImage("serihu",0.7)==1)toDraw();
 }
 
 function toDraw() {//文字を画像に描画
@@ -59,6 +59,7 @@ function toDraw() {//文字を画像に描画
 
 	ctx.fillText( line, 350,addY );
 	  }     //テキストを塗り潰しで描画
+	return 1;
           }
 
 function whichselect(e) {//選択中の値を取得
@@ -86,7 +87,7 @@ function whichselect(e) {//選択中の値を取得
                     default:console.log("エラーです。");break;
                          }
           DrawImage(ans,1);
-
+return 1;
   }
 
 
@@ -106,6 +107,7 @@ function DrawImage(name,t) {
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
             }
+	return 1;
 }
 
 
