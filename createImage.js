@@ -120,9 +120,7 @@ function DrawImage(name,n,t) {
   	   var cnvs = document.getElementById(asset[i]);
 	   var img = new Image();
 	  img.src = cnvs.toDataURL();
-	  img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
-            }
 	}
 	 
   if (cvs.msToBlob) {
