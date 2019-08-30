@@ -115,7 +115,7 @@ function DrawImage(name,n,t) {
 
    	  const cnvs = document.getElementById('cv');
 	  const cntxt = cnvs.getContext("2d");
- 	  var image[i] = new Image();
+ 	  var image = new Image();
  	  image.src= cntxt.canvas.toDataURL();
  	  image.onload = function(){
  	  ctx.drawImage(image, 0, 0, 1920, 1080);
