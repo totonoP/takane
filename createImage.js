@@ -89,11 +89,11 @@ function whichselect(e) {//選択中の値を取得
   }
 
 
-function DrawImage(name,n,t) {
+function DrawImage(name,t) {
            
   //2Dコンテキストのオブジェクトを生成する
          
-            case 3:var cvs = document.getElementById('cv');
+            var cvs = document.getElementById('cv');
             var ctx = cvs.getContext('2d');
           ctx.clearRect(0, 0, 1920, 1080);
             ctx.globalAlpha = t;
