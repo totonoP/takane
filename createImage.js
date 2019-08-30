@@ -138,6 +138,6 @@ function eraseCanvas(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	DrawImage("serihu",3,0.7);
 	}
-}
+
 
 
