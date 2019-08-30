@@ -111,16 +111,20 @@ function DrawImage(name,n,t) {
  async function concatCanvas(base, asset){
   const canvas = document.querySelector(base);
   const ctx = canvas.getContext("2d");
-
+var downloadLink = document.getElementById('download_link');
   for(let i=0; i<asset.length; i++){
     const image1 = await getImagefromCanvas(asset[i]);
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   }
 
-    let link = document.createElement("a");
-    link.href = canvas.toDataURL("image/png");
-    link.download = "takane.png";
-    link.click();
+    if (canvas.msToBlob) {
+    var blob = canvas.msToBlob();
+    window.navigator.msSaveBlob(blob, filename);
+} else {
+    downloadLink.href = canvas.toDataURL('image/png');
+    downloadLink.download = "takane.png";
+    downloadLink.click();
+}
 }
 
 
