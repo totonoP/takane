@@ -112,11 +112,12 @@ function DrawImage(name,n,t) {
   var cvs = document.getElementById('resultImage');
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
-
+　 var image = new Image();
+	 
    	  const cnvs = document.getElementById('cv');
 	  const cntxt = cnvs.getContext("2d");
- 	  var image = new Image();
- 	  image.src= cntxt.canvas.toDataURL();
+ 	 
+ 	  image.src= cmvs.toDataURL();
  	  image.onload = function(){
  	  ctx.drawImage(image, 0, 0, 1920, 1080);
  	  }
