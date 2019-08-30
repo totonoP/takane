@@ -111,22 +111,10 @@ function DrawImage(name,n,t) {
 /**
  * Canvas合成
  */
- function gousei(base,asset){
-  var cvs = document.getElementById(base);
+ function gousei(){
+  var cvs = document.getElementById('cv');
   var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
-
-  for(let i = 0;i < asset.length;i++){
-// 	 console.log(asset[i]);
-   	   const cnvs = document.getElementById(asset[i]);
-	  const cntxt = cnvs.getContext("2d");
-// 	   var img = new Image();
-// 	  img.src = cnvs.toDataURL();
-//             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
-	  var image = cntxt.getImageData(0, 0, cnvs.width, cnvs.height);
-	  console.log(image);
-	  cvs.getContext('2d').putImageData(image, 0, 0);
-	}
 	 
   if (cvs.msToBlob) {
       var blob = cvs.msToBlob();
@@ -144,11 +132,11 @@ function DrawImage(name,n,t) {
  * @param {string} target 対象canvasのid
  * @return {void}
  */
-function eraseCanvas(target){
-	for(let i = 0;i < target.length;i++){
-  const canvas = document.getElementById(target[i]);
+function eraseCanvas(){
+  const canvas = document.getElementById('cv');
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+	DrawImage("serihu",3,0.7);
 	}
 }
 
