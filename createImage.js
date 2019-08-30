@@ -115,8 +115,8 @@ function DrawImage(name,n,t) {
  * @return {void}
  */
  async function concatCanvas(base, asset){
-  const canvas = document.querySelector(base);
-  const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById(base);
+  const ctx = canvas.getContext('2d');
 var downloadLink = document.getElementById('download_link');
 
   for(let i=0; i<asset.length; i++){
@@ -141,7 +141,7 @@ var downloadLink = document.getElementById('download_link');
  */
 function eraseCanvas(target){
 	for(let i = 0;i < target.length;i++){
-  const canvas = document.querySelector(target[i]);
+  const canvas = document.getElementById(target[i]);
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
