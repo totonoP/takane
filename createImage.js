@@ -116,11 +116,13 @@ function DrawImage(name,n,t) {
   var downloadLink = document.getElementById('download_link');
 	 
   for(let i = 0;i < asset.length;i++){
-	 console.log(asset[i]);
-  	   var cnvs = document.getElementById(asset[i]);
-	   var img = new Image();
-	  img.src = cnvs.toDataURL();
-            ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+// 	 console.log(asset[i]);
+   	   var cnvs = document.getElementById(asset[i]);
+// 	   var img = new Image();
+// 	  img.src = cnvs.toDataURL();
+//             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+	  var image = context.getImageData(0, 0, cnvs.width, cnvs.height);
+			cvs.getContext('2d').putImageData(image, 0, 0);
 	}
 	 
   if (cvs.msToBlob) {
