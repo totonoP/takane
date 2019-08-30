@@ -1,8 +1,13 @@
 
-
+function saibyouga() {
+whichselect(1);
+whichselect(2);
+DrawImage("serihu",3,0.7);
+toDraw();
+}
 
 function toDraw() {//文字を画像に描画
-          var ctx = document.getElementById("cv4").getContext("2d");
+          var ctx = document.getElementById("cv").getContext("2d");
           ctx.clearRect(350, 800, 1200,500);
           var fontsize = 50;
           var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
@@ -87,12 +92,8 @@ function whichselect(e) {//選択中の値を取得
 function DrawImage(name,n,t) {
            
   //2Dコンテキストのオブジェクトを生成する
-          switch(n){
-                    case 1:var cvs = document.getElementById('cv');break;
-                    case 2:var cvs = document.getElementById('cv2');break;
-                    case 3:var cvs = document.getElementById('cv3');break;
-                    default:console.log("エラーです。");break;
-               }
+         
+            case 3:var cvs = document.getElementById('cv');
             var ctx = cvs.getContext('2d');
           ctx.clearRect(0, 0, 1920, 1080);
             ctx.globalAlpha = t;
