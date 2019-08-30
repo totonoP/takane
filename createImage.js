@@ -110,24 +110,26 @@ function DrawImage(name,n,t) {
 /**
  * Canvas合成
  */
- function gousei(base){
-  
-  var ctx = document.getElementById("resultImage").getContext("2d");
+ function gousei(base,asset){
+  var cvs = document.getElementById("resultImage");
+  var ctx = cvs.getContext("2d");
   var downloadLink = document.getElementById('download_link');
-
-  html2canvas(document.getElementById("review-screen"),{
-    onrendered: function(canvas){
-      //imgタグのsrcの中に、html2canvasがレンダリングした画像を指定する。
-      var imgData = canvas.toDataURL();
-      document.getElementById("result").src = imgData;
-    }
-  });
 	 
-  if (canvas.msToBlob) {
-      var blob = canvas.msToBlob();
+  for(let i = 0;i < asset.length;i++){
+  	   var canvas = document.getElementById(asset[i]);
+  	   const cntxt = canvas.getContext('2d');
+	   var img = new Image();
+	  img.src = canvas.toDataURL();
+	  img.onload = function(){
+            ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+            }
+	}
+	 
+  if (cvs.msToBlob) {
+      var blob = cvs.msToBlob();
       window.navigator.msSaveBlob(blob, 'takane.png');
   } else {
-      downloadLink.href = canvas.toDataURL('image/png');
+      downloadLink.href = cvs.toDataURL('image/png');
       downloadLink.download = 'takane.png';
       downloadLink.click();
   }
