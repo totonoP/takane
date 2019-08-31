@@ -123,12 +123,12 @@ function DrawImage(name,n,t) {
 
  
 function download(){
-	console.log(concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']));
+	concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
 	
   var canvas = document.querySelector('#resultImage');
   var downloadLink = document.getElementById('download_link');
 	
-	if(concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4'])== 4){
+	while(concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']) < 4)
     if (canvas.msToBlob) {
     var blob = canvas.msToBlob();
     window.navigator.msSaveBlob(blob, "takane.png");
@@ -136,7 +136,7 @@ function download(){
     downloadLink.href = canvas.toDataURL('image/png');
     downloadLink.download = "takane.png";
     downloadLink.click();
-    }
+    
 }
 }
 
