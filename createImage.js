@@ -124,11 +124,14 @@ function DrawImage(name,n,t) {
  
 async function download(){
   await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
-	
-  const canvas = document.getElementById('resultImage');
-  const downloadLink = document.getElementById('download_link');
-	
-	
+  await DL();
+  
+}
+}
+
+function DL(){
+  var canvas = document.getElementById('resultImage');
+  var downloadLink = document.getElementById('download_link');
     console.log("download");
     if (canvas.msToBlob) {
     var blob = canvas.msToBlob();
@@ -137,7 +140,6 @@ async function download(){
     downloadLink.href = canvas.toDataURL('image/png');
     downloadLink.download = "takane.png";
     downloadLink.click();
-}
 }
 
 
