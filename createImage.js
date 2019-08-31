@@ -115,7 +115,7 @@ function DrawImage(name,n,t) {
 	 
   for(let i=0; i<asset.length; i++){
     const image1 = await getImagefromCanvas(asset[i]);
-	   image1.onload = function(){
+	   image1.onload = await function(){
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
 	  console.log("create");
 	   }
