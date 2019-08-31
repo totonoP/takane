@@ -131,18 +131,17 @@ async function download(){
 }
 
 
-function DL(){
-  var canvas = document.getElementById('resultImage');
-  var downloadLink = document.getElementById('download_link');
-    console.log("download");
-    if (canvas.msToBlob) {
-    var blob = canvas.msToBlob();
-    window.navigator.msSaveBlob(blob, "takane.png");
-    } else {
-    downloadLink.href = canvas.toDataURL('image/png');
-    downloadLink.download = "takane.png";
-    downloadLink.click();
-}
+function DL()
+{
+	var canvas = document.getElementById('resultImage');
+	//アンカータグを作成
+	var a = document.createElement('a');
+	//canvasをJPEG変換し、そのBase64文字列をhrefへセット
+	a.href = canvas.toDataURL('image/jpeg', 0.85);
+	//ダウンロード時のファイル名を指定
+	a.download = 'download.jpg';
+	//クリックイベントを発生させる
+	a.click();
 }
 
 
