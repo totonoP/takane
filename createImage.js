@@ -119,14 +119,14 @@ function DrawImage(name,n,t) {
 }
 
 
-function download(){
+ async function download(){
   var canvas = document.querySelector('#resultImage');
   var downloadLink = document.getElementById('download_link');
 	
-	concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
+await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
 	
     if (canvas.msToBlob) {
-    const blob = canvas.msToBlob();
+    var blob = canvas.msToBlob();
     window.navigator.msSaveBlob(blob, "takane.png");
     } else {
     downloadLink.href = canvas.toDataURL('image/png');
