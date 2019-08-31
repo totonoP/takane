@@ -117,6 +117,7 @@ function DrawImage(name,n,t) {
     const image1 = await getImagefromCanvas(asset[i]);
     ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
   }   
+	 console.log("create");
 	 return i;
 }
 
@@ -128,7 +129,7 @@ function download(){
   var canvas = document.querySelector('#resultImage');
   var downloadLink = document.getElementById('download_link');
 	
-	if(concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']) == 4)
+	if(concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']) == 4){
     if (canvas.msToBlob) {
     var blob = canvas.msToBlob();
     window.navigator.msSaveBlob(blob, "takane.png");
@@ -136,8 +137,8 @@ function download(){
     downloadLink.href = canvas.toDataURL('image/png');
     downloadLink.download = "takane.png";
     downloadLink.click();
-    
-}
+    console.log("download");
+}}
 }
 
 
