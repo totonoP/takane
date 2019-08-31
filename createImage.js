@@ -125,7 +125,7 @@ function DrawImage(name,n,t) {
 async function download(){
   await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
 	
-  var canvas = document.querySelector('#resultImage');
+  var canvas = document.getElementById('resultImage');
   var downloadLink = document.getElementById('download_link');
 	
 	
