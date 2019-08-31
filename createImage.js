@@ -141,7 +141,7 @@ function DL(){
     downloadLink.download = "takane.png";
     downloadLink.click();
 }
-
+}
 
 
 /**
