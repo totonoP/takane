@@ -125,8 +125,8 @@ function DrawImage(name,n,t) {
 async function download(){
   await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
 	
-  var canvas = document.getElementById('resultImage');
-  var downloadLink = document.getElementById('download_link');
+  const canvas = document.getElementById('resultImage');
+  const downloadLink = document.getElementById('download_link');
 	
 	
     if (canvas.msToBlob) {
