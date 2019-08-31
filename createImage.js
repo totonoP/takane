@@ -129,6 +129,7 @@ async function download(){
   const downloadLink = document.getElementById('download_link');
 	
 	
+    console.log("download");
     if (canvas.msToBlob) {
     var blob = canvas.msToBlob();
     window.navigator.msSaveBlob(blob, "takane.png");
@@ -136,7 +137,6 @@ async function download(){
     downloadLink.href = canvas.toDataURL('image/png');
     downloadLink.download = "takane.png";
     downloadLink.click();
-    console.log("download");
 }
 }
 
