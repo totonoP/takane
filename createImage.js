@@ -127,7 +127,7 @@ async function download(){
   await DL();
   
 }
-}
+
 
 function DL(){
   var canvas = document.getElementById('resultImage');
