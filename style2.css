@@ -1,0 +1,36 @@
+.first{
+   width: 480px;
+   height: 100px;
+}
+
+.select-elements {
+	
+	overflow: hidden;
+	width: 20%;
+	height:300px;
+}
+
+
+.review-screen {
+    float: left;
+    position:  relative;
+    width 80%;
+    margin: 0 auto;
+}
+.review-screen canvas{
+    position: absolute;
+   margin: 0 auto;
+}
+
+#hk {
+	clear: both;
+	top 20px;
+}
+#pose {
+	clear: both;
+	top 20px;
+}
+#serihu_form {
+	clear: both;
+	margin-top 20px;
+}
