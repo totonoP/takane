@@ -1,5 +1,5 @@
 body{
-	
+	transform: scale(1.1);
 	font-size 50px;
 }
 
@@ -13,7 +13,7 @@ body{
 	float: left;
 	overflow: hidden;
 	width: 20%;
-	height: 500px;
+	height: 400px;
 }
 .select-elements input{
 	font-size: 20px;
