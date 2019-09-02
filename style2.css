@@ -11,8 +11,8 @@ body{
 .select-elements {
 	float: left;
 	overflow: hidden;
-	width: 30%;
-	height:30%;
+	width: 20%;
+	height:300px;
 }
 .select-elements input{
 	font-size: 20px;
@@ -41,8 +41,7 @@ body{
 .review-screen {
     float: left;
     position:  relative;
-	width: 60%;
-	height: auto;
+
     margin: 0 auto;
 }
 .review-screen canvas{
@@ -51,6 +50,7 @@ body{
 }
 
 #hk {
+	clear: both;
 	top 20px;
 }
 #pose {
