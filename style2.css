@@ -5,9 +5,8 @@ body{
 
 
 .first{
-	font-size 70px;
-   width: 480px;
-   height: 100px;
+   width: 90%;
+   height: auto;
 }
 
 .select-elements {
