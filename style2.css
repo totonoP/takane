@@ -10,15 +10,15 @@ body{
 }
 
 .select-elements {
-	
-	overflow: hidden;
-	width: 20%;
-	height:300px;
+
+	width: 50%;
+	height:auto;
 }
 
 
 .review-screen {
-    width 80%;
+    width: 80%;
+    height: auto;
     margin: 0 auto;
 }
 .review-screen canvas{
