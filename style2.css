@@ -15,11 +15,11 @@ body{
 	height: 400px;
 }
 .select-elements input{
-	font-size: 50px;
+	font-size: 30px;
 	position: absolute;
 	left: -95px;
-	width: 220px;
-	height: 108px;
+	width: 165px;
+	height: 81px;
 	padding: 12px 15px;
 	transition: 0.3s;
 	text-decoration: none;
@@ -34,7 +34,7 @@ body{
 	background-color: #da3c41;
 }
 .select-elements #takane {
-	margin-top: 80px;
+	margin-top: 105px;
 	background-color: #1b2538;
 }
 
@@ -61,7 +61,9 @@ body{
 	top 20px;
 }
 #serihu_form {
+	width:80%;
 	font-size 50px;
 	clear: both;
 	margin-top 20px;
 }
+
