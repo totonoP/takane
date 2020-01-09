@@ -181,20 +181,17 @@ function rocal(){
 	var fileList = this.files ;
 		var cvs = document.getElementById('cv2');
 		var ctx = cvs.getContext('2d');
-          ctx.clearRect(0, 0, 1920, 1080);
-
-	// 個数分の画像を表示する
-	for( var i=0,l=fileList.length; l>i; i++ ) {
-		// Blob URLの作成
-		var blobUrl = window.URL.createObjectURL( fileList[i] ) ;
+          	ctx.clearRect(0, 0, 1920, 1080);
+		 
 
 		// HTMLに書き出し (src属性にblob URLを指定)
 		 var img = new Image();
-            img.src = blobUrl;
-	}
+            img.src = window.URL.createObjectURL( fileList[0] ) ;
+	
 		img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
             }
+		}
 } ) ;
 
 
