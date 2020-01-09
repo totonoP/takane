@@ -179,6 +179,9 @@ function rocal(){
 	document.getElementById( "target" ).addEventListener( "change", function() {
 	// フォームで選択された全ファイルを取得
 	var fileList = this.files ;
+		var cvs = document.getElementById('cv2');
+		var ctx = cvs.getContext('2d');
+          ctx.clearRect(0, 0, 1920, 1080);
 
 	// 個数分の画像を表示する
 	for( var i=0,l=fileList.length; l>i; i++ ) {
@@ -186,8 +189,12 @@ function rocal(){
 		var blobUrl = window.URL.createObjectURL( fileList[i] ) ;
 
 		// HTMLに書き出し (src属性にblob URLを指定)
-		document.body.innerHTML += '<a href="' + blobUrl + '" target="_blank"><img src="' + blobUrl + '"></a>' ;
+		 var img = new Image();
+            img.src = blobUrl;
 	}
+		img.onload = function(){
+            ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+            }
 } ) ;
 
 
