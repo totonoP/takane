@@ -191,8 +191,9 @@ function rocal(){
 		img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
             }
-		}
+		
 } ) ;
+	}
 
 
 
