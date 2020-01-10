@@ -176,8 +176,16 @@ function eraseCanvas(target){
 
 
 
-function rocal(){
-	
+function setListeners(event){
+	// --------------------
+	//	引数チェック
+	// --------------------
+	var tg = event.target;	// イベントが発生した要素
+
+	if (!tg.files.length) {
+		console.log('ファイルが選択されていません');
+		return;
+	}
 	// Formからファイルを取得
 	var file = tg.files[0];
 
@@ -195,8 +203,9 @@ function rocal(){
 		fr.onload = function(evt) {
 			// 画像読み込み完了後に実行する処理
 			img.onload = function () {
+				
 				// 描画
-				ctx.drawImage(img, 0, 0,1920, 1080);
+				ctx.drawImage(img, 0, 0, 1920, 1080);
 			}
 			// Base64エンコードされた文字を画像のurlとしてsrcプロパティに渡す
 			// すると、画像として表示される。
