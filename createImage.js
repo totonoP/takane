@@ -175,39 +175,36 @@ function eraseCanvas(target){
 }
 
 
-function rocal(){
-	document.getElementById( "target" ).addEventListener( "change", function() {
-	// フォームで選択された全ファイルを取得
-	var fileList = this.files ;
-		var cvs = document.getElementById('cv2');
-		var ctx = cvs.getContext('2d');
-          	ctx.clearRect(0, 0, 1920, 1080);
-		 
 
-		// HTMLに書き出し (src属性にblob URLを指定)
-		 var img = new Image();
-            img.src = window.URL.createObjectURL( fileList[0] ) ;
+function rocal(){
 	
-		img.onload = function(){
-            ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
-            }
+	// Formからファイルを取得
+	var file = tg.files[0];
+
+	// --------------------
+	//	ファイル読み込み
+	// --------------------
+	var cve = document.getElementById("cv2");
+	if (cve.getContext) {
+		var ctx = cve.getContext('2d');
+
+		var img = new Image();
+		var fr  = new FileReader();
 		
-} ) ;
+		// 画像ファイル読み込み完了後に実行する処理
+		fr.onload = function(evt) {
+			// 画像読み込み完了後に実行する処理
+			img.onload = function () {
+				// 描画
+				ctx.drawImage(img, 0, 0,1920, 1080);
+			}
+			// Base64エンコードされた文字を画像のurlとしてsrcプロパティに渡す
+			// すると、画像として表示される。
+			img.src = evt.target.result;
+		}
+		
+		// fileを読み込む データはBase64エンコードされる
+		fr.readAsDataURL(file);
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
