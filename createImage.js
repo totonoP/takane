@@ -217,3 +217,8 @@ function setListeners(event){
 	}
 
 };
+
+// --------------------
+//	イベントのリスナーを登録
+// --------------------
+document.getElementById("ufile").addEventListener("change", setListeners, false);
