@@ -192,7 +192,7 @@ function setListeners(event){
 	// --------------------
 	//	ファイル読み込み
 	// --------------------
-	var cve = document.getElementById("cv2");
+	var cve = document.getElementById('cv2');
 	if (cve.getContext) {
 		var ctx = cve.getContext('2d');
 
