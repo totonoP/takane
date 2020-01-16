@@ -1,3 +1,13 @@
+function Kirikae(name){
+	document.getElementById(name).style.display = 'block';
+	if(name != shiny)document.getElementById('shiny').style.display = 'none';
+	if(name != shihuku)document.getElementById('shihuku').style.display = 'none';
+	if(name != shiny)document.getElementById('shiny').style.display = 'none';
+	if(name != sutsu)document.getElementById('sutsu').style.display = 'none';
+	if(name != hk)document.getElementById('hk').style.display = 'none';
+	if(name != pose)document.getElementById('pose').style.display = 'none';
+	
+}
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
