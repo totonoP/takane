@@ -96,7 +96,8 @@ function DrawImage(name,n,t) {
             ctx.globalAlpha = t;
             //画像オブジェクトを生成
             var img = new Image();
-            img.src ="img/"+name+".png";
+            if(n != 2)img.src ="img/"+name+".png";
+		else img.src ="pose/"+name+".png";
           
             //画像をcanvasに設定
             img.onload = function(){
