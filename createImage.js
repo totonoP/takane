@@ -15,7 +15,6 @@ function Kirikae(nm){
 	}
 	
 	document.getElementById(nm).style.display = 'block';
-	consol.log(nm);
 	
 }
 
