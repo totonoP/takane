@@ -1,10 +1,18 @@
 function Kirikae(nm){
+	if(nm == shiny || nm == shihuku || nm == sutsu){
+		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
+		if(nm != 'shihuku')document.getElementById('shihuku').style.display = 'none';
+		if(nm != 'sutsu')document.getElementById('sutsu').style.display = 'none';
+		console.log("koma");
+	}
+	if(nm == hk || nm == pose){
 		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
 		if(nm != 'shihuku')document.getElementById('shihuku').style.display = 'none';
 		if(nm != 'sutsu')document.getElementById('sutsu').style.display = 'none';
 		if(nm != 'hk')document.getElementById('hk').style.display = 'none';
 		if(nm != 'pose')document.getElementById('pose').style.display = 'none';
-	
+		console.log("pose/hk");
+	}
 	document.getElementById(nm).style.display = 'block';
 	
 }
