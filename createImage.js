@@ -1,9 +1,9 @@
 function Kirikae(nm){
-		if(nm != shiny)document.getElementById('shiny').style.display = 'none';
-		if(nm != shihuku)document.getElementById('shihuku').style.display = 'none';
-		if(nm != sutsu)document.getElementById('sutsu').style.display = 'none';
-		if(nm != hk)document.getElementById('hk').style.display = 'none';
-		if(nm != pose)document.getElementById('pose').style.display = 'none';
+		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
+		if(nm != 'shihuku')document.getElementById('shihuku').style.display = 'none';
+		if(nm != 'sutsu')document.getElementById('sutsu').style.display = 'none';
+		if(nm != 'hk')document.getElementById('hk').style.display = 'none';
+		if(nm != 'pose')document.getElementById('pose').style.display = 'none';
 	
 	document.getElementById(nm).style.display = 'block';
 	
