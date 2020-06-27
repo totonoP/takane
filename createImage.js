@@ -25,8 +25,8 @@ function toDraw() {//文字を画像に描画
           var fontsize = 50;
           var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
           var txt2 = document.forms.serihu_form.dare.value;//話者の名前
-          //ctx.font = "48px arial black"; フォントにArial,40px,太字を指定
-	  ctx.font = "48px 'Helvetica Neue','Arial','Hiragino Kaku Gothic ProN','Hiragino Sans','Meiryo','sans-serif'";
+          
+	  ctx.font = "bold 48px 'Helvetica Neue','Arial','Hiragino Kaku Gothic ProN','Hiragino Sans','Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
           ctx.fillStyle = "white"; //塗り潰し色を緑に
           ctx.fillText(txt2,350,840);
 
@@ -80,7 +80,6 @@ function whichselect(e) {//選択中の値を取得
                                var ans;
                                   for(var i = 0; i < slct.length; i++){
                                     if(slct[i].checked) {
-                                      
                                              ans = slct[i].value;
                                     }
                                   }
@@ -90,7 +89,6 @@ function whichselect(e) {//選択中の値を取得
                                   var ans;
                                   for(var i = 0; i < slct2.length; i++){
                                     if(slct2[i].checked) {
-                                      
                                              ans = slct2[i].value;
                                     }
                                   }
@@ -118,8 +116,8 @@ function DrawImage(name,n,t) {
             //画像オブジェクトを生成
             var img = new Image();
             if(n != 2)img.src ="img/"+name+".png";
-		else img.src ="pose/"+name+".png";
-          
+	    else img.src ="pose/"+name+".png";
+          console.log("画像読み込み直前！");
             //画像をcanvasに設定
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
