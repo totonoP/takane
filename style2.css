@@ -49,6 +49,11 @@
 	clear: both;
 	top 50px;
 }
+input.where{
+	width: 1.5em;
+	height: 1.5em;
+}
+
 #pose {
 	clear: both;
 	top 50px;
