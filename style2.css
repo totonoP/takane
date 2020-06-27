@@ -13,10 +13,10 @@
 	overflow: hidden;
 	width: 20%;
 	height: 40%;
+	margin-bottom:40%
 }
 .select-elements input{
 	font-size: 20px;
-	position: absolute;
 	height: 15%;
 	padding: 12px 15px;
 	transition: 0.3s;
