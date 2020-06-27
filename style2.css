@@ -51,11 +51,13 @@ body{
 }
 
 #hk {
+	width:100%;
 	font-size 70px;
 	clear: both;
 	top 50px;
 }
 #pose {
+	width:100%;
 	font-size 70px;
 	clear: both;
 	top 50px;
