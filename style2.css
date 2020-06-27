@@ -13,6 +13,15 @@ body{
 	overflow: hidden;
 	width: 100%;
 }
+.select-elements input{
+	font-size: 20px;
+	position: absolute;
+	padding: 12px 15px;
+	transition: 0.3s;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 0 5px 5px 0;
+}
 
 .select-elements #haikei {
 	width: 30%;
