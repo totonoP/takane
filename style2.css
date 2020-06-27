@@ -32,7 +32,7 @@ body{
 }
 .select-elements #takane {
 	width: 30%;
-	margin-top: 105px;
+	margin-top: 20%;
 	background-color: #1b2538;
 }
 
@@ -49,20 +49,14 @@ body{
 }
 
 #hk {
-	width:100%;
-	font-size 500px;
 	clear: both;
 	top 50px;
 }
 #pose {
-	width:100%;
-	font-size 500px;
 	clear: both;
 	top 50px;
 }
 #serihu_form {
-	width:100%;
-	font-size 500px;
 	clear: both;
 	top 50%;
 }
