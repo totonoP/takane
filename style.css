@@ -39,7 +39,7 @@
 
     margin: 0 auto;
 }
-.review-screen{
+.review-screen canvas{
     position: absolute;
    margin: 0 auto;
 }
