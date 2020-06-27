@@ -1,3 +1,9 @@
+function loading(){
+ 	 var ctx = document.getElementById("cv1").getContext("2d");
+ 	 ctx.drawImage(img,0,0);
+	}
+
+
 function Kirikae(nm){
 	if(nm == 'shiny' || nm == 'shihuku' || nm == 'sutsu'||nm == 'koujou2'){
 		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
