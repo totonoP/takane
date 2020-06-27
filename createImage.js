@@ -102,6 +102,7 @@ function whichselect(e) {//選択中の値を取得
 
 
 function DrawImage(name,n,t) {
+	document.getElementById('resultImage').style.visibility ="hidden";
         document.getElementById('cv').style.visibility ="hidden";
 	document.getElementById('cv2').style.visibility ="hidden";
 	document.getElementById('cv3').style.visibility ="hidden";
@@ -124,6 +125,7 @@ function DrawImage(name,n,t) {
             //画像をcanvasに設定
             img.onload = function(){
             ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+		document.getElementById('resultImage').style.visibility ="visible";
 		document.getElementById('cv').style.visibility ="visible";
 		document.getElementById('cv2').style.visibility ="visible";
 		document.getElementById('cv3').style.visibility ="visible";
