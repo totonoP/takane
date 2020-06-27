@@ -11,7 +11,7 @@ body{
 .select-elements {
 	float: left;
 	overflow: hidden;
-	width: 30%;
+	width: 25%;
 	height: 40%;
 }
 .select-elements input{
@@ -64,6 +64,6 @@ body{
 	width:100%;
 	font-size 500px;
 	clear: both;
-	margin-top 20px;
+	top 50%;
 }
 
