@@ -1,5 +1,5 @@
 function loading(){
- 	 var ctx = document.getElementById("cv1").getContext("2d");
+ 	 var ctx = document.getElementById("loading").getContext("2d");
  	 ctx.drawImage(img,0,0);
 	}
 
