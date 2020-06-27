@@ -4,36 +4,23 @@ body{
 
 
 .first{
-   width: 90%;
+   width: 100%;
    height: auto;
 }
 
 .select-elements {
 	float: left;
 	overflow: hidden;
-	width: 30%;
-	height: 400px;
+	width: 100%;
 }
-.select-elements input{
-	font-size: 100px;
-	position: absolute;
-	left: -55px;
-	width: 165px;
-	height: 81px;
-	padding: 12px 15px;
-	transition: 0.3s;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 0 5px 5px 0;
-}
-.select-elements :hover {
-	left: 0px;
-}
+
 .select-elements #haikei {
+	width: 100%;
 	margin-top: 20px;
 	background-color: #da3c41;
 }
 .select-elements #takane {
+	width: 100%;
 	margin-top: 105px;
 	background-color: #1b2538;
 }
