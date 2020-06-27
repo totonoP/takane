@@ -1,7 +1,7 @@
-body{
+/*body{
 	font-size 500px;
 }
-
+*/
 
 .first{
    width: 100%;
@@ -11,7 +11,7 @@ body{
 .select-elements {
 	float: left;
 	overflow: hidden;
-	width: 25%;
+	width: 20%;
 	height: 40%;
 }
 .select-elements input{
@@ -26,12 +26,12 @@ body{
 }
 
 .select-elements #haikei {
-	width: 30%;
+	width: 20%;
 	margin-top: 20px;
 	background-color: #da3c41;
 }
 .select-elements #takane {
-	width: 30%;
+	width: 20%;
 	margin-top: 20%;
 	background-color: #1b2538;
 }
