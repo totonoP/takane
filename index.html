@@ -17,12 +17,12 @@
 	
 	<script>
 		//待機画像のプレロード
-  	var img = new Image();    //画像オブジェクト作成
-  	img.src = "loading.jpg";  //写真のパスを指定する
+  	var img_load = new Image();    //画像オブジェクト作成
+  	img_load.src = "loading.jpg";  //写真のパスを指定する
 	</script>
 	
 </head>
-<body onload="loading()">
+<body onload="load()">
 
 	<div class="select-elements"><br><br>
 		
@@ -44,7 +44,14 @@
 		<canvas id="cv4" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
 		
 	</div>
-<script>DrawImage("serihu",3,0.7);</script>
+	<script>
+	function load(){
+	  var ctx = document.getElementById("loading").getContext("2d");
+	  ctx.drawImage(img_load,0,0);
+	}
+	DrawImage("serihu",3,0.7);
+	</script>										 
+	
 	<div id = "hk" style="display:none">
 				
 				<input type="radio" name="e1" value="entrance" onchange = "whichselect(1)"　checked> エントランス
