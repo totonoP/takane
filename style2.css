@@ -1,5 +1,5 @@
 body{
-	font-size 80px;
+	font-size 100px;
 }
 
 
@@ -15,7 +15,7 @@ body{
 	height: 400px;
 }
 .select-elements input{
-	font-size: 30px;
+	font-size: 100px;
 	position: absolute;
 	left: -55px;
 	width: 165px;
@@ -52,19 +52,19 @@ body{
 
 #hk {
 	width:100%;
-	font-size 70px;
+	font-size 100px;
 	clear: both;
 	top 50px;
 }
 #pose {
 	width:100%;
-	font-size 70px;
+	font-size 100px;
 	clear: both;
 	top 50px;
 }
 #serihu_form {
 	width:100%;
-	font-size 70px;
+	font-size 100px;
 	clear: both;
 	margin-top 20px;
 }
