@@ -1,5 +1,5 @@
 body{
-	font-size 100px;
+	font-size 500px;
 }
 
 
@@ -15,12 +15,12 @@ body{
 }
 
 .select-elements #haikei {
-	width: 100%;
+	width: 30%;
 	margin-top: 20px;
 	background-color: #da3c41;
 }
 .select-elements #takane {
-	width: 100%;
+	width: 30%;
 	margin-top: 105px;
 	background-color: #1b2538;
 }
@@ -32,26 +32,26 @@ body{
     margin: 0 auto;
 }
 .review-screen canvas{
-    width: 100%;
+    width: 70%;
     position: absolute;
    margin: 0 auto;
 }
 
 #hk {
 	width:100%;
-	font-size 100px;
+	font-size 500px;
 	clear: both;
 	top 50px;
 }
 #pose {
 	width:100%;
-	font-size 100px;
+	font-size 500px;
 	clear: both;
 	top 50px;
 }
 #serihu_form {
 	width:100%;
-	font-size 100px;
+	font-size 500px;
 	clear: both;
 	margin-top 20px;
 }
