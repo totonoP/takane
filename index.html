@@ -14,8 +14,14 @@
 	
 	<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
 	
+	//待機画像のプレロード
+	<script>
+  	var img = new Image();    //画像オブジェクト作成
+  	img.src = "loading.jpg";  //写真のパスを指定する
+	</script>
+	
 </head>
-<body>
+<body onload="loading()">
 
 	<div class="select-elements"><br><br>
 		
@@ -29,6 +35,7 @@
 	
 	<div class="review-screen">
 		<img src="loading.png" alt="読み込み中" title="ろーでぃんぐ" width="1920px" height="1080px" style=width:480px;height:270px;>
+		<canvas id="loading" width="1920px" height="1080px" style=width:480px;height:270px;"></canvas>
 		<canvas id="resultImage" width="1920px" height="1080px" style="background-color:blue;width:480px;height:270px;"></canvas>
 		<canvas id="cv" width="1920px" height="1080px" style="background-color:black; width:480px;height:270px;"></canvas>
 		<canvas id="cv2" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
