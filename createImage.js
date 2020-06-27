@@ -1,7 +1,3 @@
-function loading(){
- 	 var ctx = document.getElementById("loading").getContext("2d");
- 	 ctx.drawImage(img,0,0);
-	}
 
 
 function Kirikae(nm){
