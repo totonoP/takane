@@ -74,6 +74,18 @@
 		
 			</div><br>
 	<div id = "pose" style="display:none">
+					     
+		<select name="costume" id="costume" onchange="createMenu(this.value)">
+			<option disabled selected>貴音さんの衣装を選択してください</option>
+			<option value="cusual">私服</option>
+			<option value="shiny">シャイニートリニティ</option>
+			<option value="suit">スーツ</option>
+			<option value="lady">レディ・アルカード</option>
+		</select>
+		<select name="menuList" id="menuList" disabled>
+			<option disabled selected>表情を選択してください</option>
+		</select>
+						     
 		<input type="button" id="shihukubtn" value="私服" onclick="Kirikae('shihuku')">
 		<input type="button" id="shinybtn" value="シャイニートリニティ" onclick="Kirikae('shiny')">
 		<input type="button" id="sutsubtn" value="スーツ" onclick="Kirikae('sutsu')">
