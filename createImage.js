@@ -28,19 +28,7 @@ function selectpose(selectGenre){
 }
 
 function Kirikae(nm){
-	if(nm == 'hk'){
-		document.getElementById('takane').style.display = 'none';
-		document.getElementById('words').style.display = 'none';
-	}
-	if(nm == 'takane'){
-		document.getElementById('hk').style.display = 'none';
-		document.getElementById('words').style.display = 'none';
-	}
-	if(nm == 'words'){
-		document.getElementById('hk').style.display = 'none';
-		document.getElementById('takane').style.display = 'none';
-	}
-	document.getElementById(nm).style.display = "";
+	
 	console.log(nm);
 	
 }
