@@ -24,7 +24,7 @@ function selectpose(selectGenre){
     let option = document.createElement('option');
     option.innerHTML = menu;
     menuList.appendChild(option);  
-  });    
+  });
 }
 
 function Kirikae(nm){
@@ -177,7 +177,11 @@ function DrawImage(name,n,t) {
 	 
 }
 
-
+function load(){
+	var ctx = document.getElementById("loading").getContext("2d");
+	ctx.drawImage(img_load,0,0);
+	DrawImage("serihu",3,0.7);
+}
  
 async function download(){
   await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
