@@ -1,4 +1,31 @@
 
+const face = 
+      {
+        "cusual": ["寿司", "天ぷら", "おでん"],
+        "shiny"["八宝菜", "麻婆豆腐", "エビチリ"],
+        "suit": ["パスタ", "ピザ", "ミネストローネ"]
+	"lady": ["パスタ", "ピザ", "ミネストローネ"]
+      };
+
+
+function selectpose(selectGenre){
+  
+  let menuList = document.getElementById('menuList');
+  menuList.disabled = false;
+  menuList.innerHTML = '';
+	
+  let option = document.createElement('option');
+  option.innerHTML = '表情を選択してください';
+  option.defaultSelected = true;
+  option.disabled = true;
+  menuList.appendChild(option);  
+  
+  face[selectGenre].forEach( menu => {
+    let option = document.createElement('option');
+    option.innerHTML = menu;
+    menuList.appendChild(option);  
+  });    
+}
 
 function Kirikae(nm){
 	if(nm == 'shiny' || nm == 'shihuku' || nm == 'sutsu'||nm == 'koujou2'){
