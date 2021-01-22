@@ -6,41 +6,24 @@
 	<link rel="stylesheet" type="text/css" href="style2.css" media="screen and (max-width:1000px)">
 
 	<div class = "first">
-	<title>貴音さんコミュジェネレータ</title>
-	 <h2>貴音さんコミュジェネレータ</h2>
-	 貴音さんとこみゅにけーしょんしたい。<br><br>＊Chrome推奨
+		<title>貴音さんコミュジェネレータ</title>
+		 <h2>貴音さんコミュジェネレータ</h2>
+		 貴音さんとこみゅにけーしょんしたい。<br><br>＊Chrome推奨
 	</div>
-	
-	
 	<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
 	
-	
-	<script>
-		//待機画像のプレロード
-  	var img_load = new Image();    //画像オブジェクト作成
-  	img_load.src = "loading.png";  //写真のパスを指定する
-	</script>
-	
 </head>
+	
 <body onload="load()">
 	<div class="review-screen" style="display:none">
-		
 		<canvas id="loading" width="1920px" height="1080px" style=width:480px;height:270px;"></canvas>
 		<canvas id="resultImage" width="1920px" height="1080px" style="background-color:blue;width:480px;height:270px;"></canvas>
 		<canvas id="cv" width="1920px" height="1080px" style="background-color:black; width:480px;height:270px;"></canvas>
 		<canvas id="cv2" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
 		<canvas id="cv3" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
 		<canvas id="cv4" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
-		
 	</div>
-	<script>
-		function load(){
-		  var ctx = document.getElementById("loading").getContext("2d");
-		  ctx.drawImage(img_load,0,0);
-		}
-		DrawImage("serihu",3,0.7);
-	</script>
-			  
+												 
 	<div class="select-elements"><br><br>
 		<input type="button" id="btn_haikei" value="背景" onclick="Kirikae('hk')">
 		<input type="button" id="btn_takane" value="貴音さん" onclick="Kirikae('takane')">
