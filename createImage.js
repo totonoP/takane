@@ -28,21 +28,17 @@ function selectpose(selectGenre){
 }
 
 function Kirikae(nm){
-	if(nm == 'shiny' || nm == 'shihuku' || nm == 'sutsu'||nm == 'koujou2'){
-		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
-		if(nm != 'shihuku')document.getElementById('shihuku').style.display = 'none';
-		if(nm != 'sutsu')document.getElementById('sutsu').style.display = 'none';
-		if(nm != 'koujou2')document.getElementById('koujou2').style.display = 'none';
-		console.log("koma");
+	if(nm == 'hk'){
+		document.getElementById('takane').style.display = 'none';
+		document.getElementById('words').style.display = 'none';
 	}
-	if(nm == 'hk' || nm == 'pose'){
-		if(nm != 'shiny')document.getElementById('shiny').style.display = 'none';
-		if(nm != 'shihuku')document.getElementById('shihuku').style.display = 'none';
-		if(nm != 'sutsu')document.getElementById('sutsu').style.display = 'none';
-		if(nm != 'koujou2')document.getElementById('koujou2').style.display = 'none';
-		if(nm != 'hk')document.getElementById('hk').style.display = 'none';
-		if(nm != 'pose')document.getElementById('pose').style.display = 'none';
-		console.log("pose/hk");
+	if(nm == 'takane'){
+		document.getElementById('hk').style.display = 'none';
+		document.getElementById('words').style.display = 'none';
+	}
+	if(nm == 'words'){
+		document.getElementById('hk').style.display = 'none';
+		document.getElementById('takane').style.display = 'none';
 	}
 	document.getElementById(nm).style.display = 'block';
 	
