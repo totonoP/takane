@@ -28,18 +28,22 @@ function selectpose(selectGenre){
 }
 
 document.getElementById('btn_haikei').onclick = function(){
+	document.getElementById('hk').style.display = 'block';
 	document.getElementById('takane').style.display = 'none';
 	document.getElementById('words').style.display = 'none';
 }
 
 document.getElementById('btn_takane').onclick = function(){
 	document.getElementById('hk').style.display = 'none';
+	document.getElementById('takane').style.display = 'block';
 	document.getElementById('words').style.display = 'none';
+}
 }
 
 document.getElementById('btn_words').onclick = function(){
 	document.getElementById('hk').style.display = 'none';
 	document.getElementById('takane').style.display = 'none';
+	document.getElementById('words').style.display = 'block';
 }
 
 
