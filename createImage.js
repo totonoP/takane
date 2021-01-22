@@ -31,19 +31,21 @@ document.getElementById('btn_haikei').onclick = function(){
 	document.getElementById('hk').style.display = 'block';
 	document.getElementById('takane').style.display = 'none';
 	document.getElementById('words').style.display = 'none';
+	console.log("背景選択");
 }
 
 document.getElementById('btn_takane').onclick = function(){
 	document.getElementById('hk').style.display = 'none';
 	document.getElementById('takane').style.display = 'block';
 	document.getElementById('words').style.display = 'none';
-}
+	console.log("貴音さん選択");
 }
 
 document.getElementById('btn_words').onclick = function(){
 	document.getElementById('hk').style.display = 'none';
 	document.getElementById('takane').style.display = 'none';
 	document.getElementById('words').style.display = 'block';
+	console.log("台詞選択");
 }
 
 
