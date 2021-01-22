@@ -27,23 +27,21 @@ function selectpose(selectGenre){
   });
 }
 
-function Kirikae(nm){
-	if(nm == 'hk'){
-		document.getElementById('takane').style.display = 'none';
-		document.getElementById('words').style.display = 'none';
-	}
-	if(nm == 'takane'){
-		document.getElementById('hk').style.display = 'none';
-		document.getElementById('words').style.display = 'none';
-	}
-	if(nm == 'words'){
-		document.getElementById('hk').style.display = 'none';
-		document.getElementById('takane').style.display = 'none';
-	}
-	document.getElementById(nm).style.display = "";
-	console.log(nm);
-	
+document.getElementById('btn_haikei').onclick = function(){
+	document.getElementById('takane').style.display = 'none';
+	document.getElementById('words').style.display = 'none';
 }
+
+document.getElementById('btn_takane').onclick = function(){
+	document.getElementById('hk').style.display = 'none';
+	document.getElementById('words').style.display = 'none';
+}
+
+document.getElementById('btn_words').onclick = function(){
+	document.getElementById('hk').style.display = 'none';
+	document.getElementById('takane').style.display = 'none';
+}
+
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
