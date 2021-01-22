@@ -155,19 +155,18 @@
 		<input type="button" value="戻る" onclick="document.getElementById('koujou2').style.display = 'none';">
 			</div>
 	
-	<form action="" name="textInput" id="serihu_form">
+	<form action="" name="textInput" id="words" style="display:none">
 		<br>
 			名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
 			セリフ：<textarea rows="3" cols="50" id = "serihu">面妖な！</textarea>
 			<input type="button" value="決定" onclick="toDraw()" />
-			
 			<input type="button" value="すべてクリア" onclick="eraseCanvas(['cv','cv2','cv4'])">
 		<br>
-		<input type="button" value="ダウンロード" onclick="download()">
-		
-  
+	</form>
+												     
+	<input type="button" value="ダウンロード" onclick="download()">
 	<a href="https://twitter.com/share" class="twitter-share-button" data-text="　"data-hashtags="貴音コミュジェネレータ" onclick="download()">Tweet</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</form>
-		</body>
+
+	</body>
 </html>
