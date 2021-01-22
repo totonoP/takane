@@ -41,6 +41,7 @@ function Kirikae(nm){
 		document.getElementById('takane').style.display = 'none';
 	}
 	document.getElementById(nm).style.display = "";
+	console.log(nm)
 	
 }
 
