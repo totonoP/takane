@@ -40,7 +40,7 @@ function Kirikae(nm){
 		document.getElementById('hk').style.display = 'none';
 		document.getElementById('takane').style.display = 'none';
 	}
-	document.getElementById(nm).style.display = 'block';
+	document.getElementById(nm).style.display = "";
 	
 }
 
