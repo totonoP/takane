@@ -23,17 +23,6 @@
 	
 </head>
 <body onload="load()">
-
-	<div class="select-elements"><br><br>
-		
-		<input type="button" id="haikei" value="背景" onclick="Kirikae('hk')">
-			
-		<input type="button" id="takane" value="貴音さん" onclick="Kirikae('pose')">
-			
-		
-		
-	</div>
-	
 	<div class="review-screen">
 		
 		<canvas id="loading" width="1920px" height="1080px" style=width:480px;height:270px;"></canvas>
@@ -50,8 +39,15 @@
 	  ctx.drawImage(img_load,0,0);
 	}
 	DrawImage("serihu",3,0.7);
-	</script>										 
-	
+	</script>
+			  
+	<div class="select-elements"><br><br>
+		<input type="button" id="haikei" value="背景" onclick="Kirikae('hk')">
+		<input type="button" id="costume" value="衣装" onclick="Kirikae('costume')">
+		<input type="button" id="takane" value="表情" onclick="Kirikae('takane')">
+		<input type="button" id="words" value="台詞" onclick="Kirikae('words')">
+	</div>
+										       
 	<div id = "hk" style="display:none">
 				
 				<input class = "where1" type="radio" name="e1" value="entrance" onchange = "whichselect(1)"　checked> エントランス
