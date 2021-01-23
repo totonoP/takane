@@ -1,6 +1,6 @@
 window.onload = function(){
 	var ctx = document.getElementById("loading").getContext("2d");
-	ctx.drawImage("loading.png","loading",1);
+	DrawImage("loading.png","loading",1);
 	DrawImage("img/serihu.png","cv3",0.7);
 }
 
