@@ -1,3 +1,9 @@
+window.onload = function(){
+	var ctx = document.getElementById("loading").getContext("2d");
+	ctx.drawImage("loading.png","loading",1);
+	DrawImage("img/serihu.png","cv3",0.7);
+}
+
 
 const face = 
       {
@@ -133,12 +139,6 @@ async function concatCanvas(base, asset){
 
 }
 
-function load(){
-	var ctx = document.getElementById("loading").getContext("2d");
-	ctx.drawImage(img_load,0,0);
-	DrawImage("serihu",3,0.7);
-}
- 
 async function download(){
 	await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
 	await DL();
