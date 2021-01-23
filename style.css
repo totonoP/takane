@@ -6,7 +6,7 @@
 
 .review-screen {
     width: 100%;
-    height: 60%;
+    height: 60px;
     overflow:hidden;
 }
 .review-screen canvas{
@@ -21,14 +21,14 @@
 }
 
 #hk {
-	clear: both;
 	top 20px;
+	text-align:center;
 }
 #takane {
-	clear: both;
 	top 20px;
+	text-align:center;
 }
 #words {
-	clear: both;
 	margin-top 20px;
+	text-align:center;
 }
