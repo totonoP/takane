@@ -4,9 +4,7 @@
 }
 
 .review-screen {
-    float: left;
     position:  relative;
-
     margin: 0 auto;
 }
 .review-screen canvas{
@@ -16,7 +14,6 @@
 
 
 .select-elements {
-	overflow: hidden;
 	width: 20%;
 	height:30%;
 }
@@ -25,11 +22,11 @@
 	clear: both;
 	top 20px;
 }
-#pose {
+#takane {
 	clear: both;
 	top 20px;
 }
-#serihu_form {
+#words {
 	clear: both;
 	margin-top 20px;
 }
