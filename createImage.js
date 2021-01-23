@@ -35,59 +35,56 @@ async function download(){
 }
 
 function toDraw() {//文字を画像に描画
-          var ctx = document.getElementById("cv4").getContext("2d");
-          ctx.clearRect(350, 800, 1200,500);
-          var fontsize = 50;
-          var txt = document.forms.serihu_form.serihu.value; //描画する文字（セリフ）
-          var txt2 = document.forms.serihu_form.dare.value;//話者の名前
-          
-	  ctx.font = "bold 48px 'Helvetica Neue','Arial','Hiragino Kaku Gothic ProN','Hiragino Sans','Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
-          ctx.fillStyle = "white"; //塗り潰し色を緑に
-          ctx.fillText(txt2,350,840);
+	var ctx = document.getElementById("cv4").getContext("2d");
+	ctx.clearRect(350, 800, 1200,500);
+	var fontsize = 50;
+	var txt = document.forms.words.serihu.value; //描画する文字（セリフ）
+	var txt2 = document.forms.words.who.value;//話者の名前
 
-    var len = txt.length; 
-    var strArray = [];
-    var tmp = "";
-    var i = 0;
-    var l;
-    if( len < 1 ){
-        //textの文字数が0だったら終わり
-        return strArray;
-    }
+	ctx.font = "bold 48px 'Helvetica Neue','Arial','Hiragino Kaku Gothic ProN','Hiragino Sans','Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
+	ctx.fillStyle = "white"; //文字色を白に
+	ctx.fillText(txt2,350,840);
 
-    for( i = 0; i < len; i++ ){
-        var c = txt.charAt(i);  //textから１文字抽出
-        if( c == "\n" ){
-            /* 改行コードの場合はそれまでの文字列を配列にセット */
-            strArray.push( tmp );
-            tmp = "";
+	var len = txt.length; 
+	var strArray = [];
+	var tmp = "";
+	var i = 0;
+	var l;
+	if( len < 1 ){
+		//textの文字数が0だったら終わり
+		return strArray;
+	}
 
-            continue;
-        }
+	for( i = 0; i < len; i++ ){
+		var c = txt.charAt(i);  //textから１文字抽出
+		if( c == "\n" ){
+			/* 改行コードの場合はそれまでの文字列を配列にセット */
+			strArray.push( tmp );
+			tmp = "";
+			continue;
+		}
 
-        /* contextの現在のフォントスタイルで描画したときの長さを取得 */
-        if (ctx.measureText( tmp + c ).width <= 1200){
-            /* 指定幅を超えるまでは文字列を繋げていく */
-            tmp += c;
-        }else{
-            /* 超えたら、それまでの文字列を配列にセット */
-            strArray.push( tmp );
-            tmp = c;
-        }
-    }
+		/* contextの現在のフォントスタイルで描画したときの長さを取得 */
+		if (ctx.measureText( tmp + c ).width <= 1200){
+			/* 指定幅を超えるまでは文字列を繋げていく */
+			tmp += c;
+		}
+		else{
+			/* 超えたら、それまでの文字列を配列にセット */
+			strArray.push( tmp );
+			tmp = c;
+		}
+	}
 
-    /* 繋げたままの分があれば回収 */
-    if( tmp.length > 0 )
-        strArray.push( tmp );
-	
-          
-          for( i=0, l=strArray.length; l>i; i++ ) {
-	var line = strArray[i];
-          var addY = 900 + 55 * i ;
+	/* 繋げたままの分があれば回収 */
+	if( tmp.length > 0 )　strArray.push( tmp );
 
-	ctx.fillText( line, 350,addY );
-	  }     //テキストを塗り潰しで描画
-          }
+	for( i=0, l=strArray.length; l>i; i++ ) {
+		var line = strArray[i];
+		var addY = 900 + 55 * i ;
+		ctx.fillText( line,350,addY );
+	}     //テキストを塗り潰しで描画
+}
 
 function whichselect(e) {//選択中の値を取得
           switch(e) {
