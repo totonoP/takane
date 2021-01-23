@@ -8,7 +8,7 @@ const face =
 	"lady": ["笑顔", "笑顔２", "にっこり","にっこり面妖","うっとり","びっくり","びっくり２","伺い","不安","えー","すん","横"]
       };
 
-
+//選択された衣装によって表情の選択肢を変える
 function selectpose(selectGenre){
   
   let menuList = document.getElementById('menuList');
@@ -28,35 +28,10 @@ function selectpose(selectGenre){
   });
 }
 
-document.getElementById('btn_haikei').onclick = function(){
-	document.getElementById('hk').style.display = 'block';
-	document.getElementById('takane').style.display = 'none';
-	document.getElementById('words').style.display = 'none';
-	console.log("背景選択");
-}
-
-document.getElementById('btn_takane').onclick = function(){
-	document.getElementById('hk').style.display = 'none';
-	document.getElementById('takane').style.display = 'block';
-	document.getElementById('words').style.display = 'none';
-	console.log("貴音さん選択");
-}
-
-document.getElementById('btn_words').onclick = function(){
-	document.getElementById('hk').style.display = 'none';
-	document.getElementById('takane').style.display = 'none';
-	document.getElementById('words').style.display = 'block';
-	console.log("台詞選択");
-}
-document.getElementById('btn_dld').onclick = async function(){
-	document.getElementById('hk').style.display = 'none';
-	document.getElementById('takane').style.display = 'none';
-	document.getElementById('words').style.display = 'none';
-	console.log("ダウンロード");
-	
+//画像のダウンロード
+async function download(){
 	await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
   	await DL();
-	
 }
 
 function toDraw() {//文字を画像に描画
