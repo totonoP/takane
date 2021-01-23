@@ -26,7 +26,7 @@
 		<label class="tab_class" for="tb_haikei">背景</label>
 		<div class="content_class">
 		<p>
-			<div id = "hk" style="display:none">
+			<div id = "hk">
 				<select name="" bgid="bg">
 					<option disabled selected>背景を選択してください</option>
 					<option value="entrance"> エントランス</option>
@@ -58,7 +58,7 @@
 		<label class="tab_class" for="tb_costume">衣装</label>
 		<div class="content_class">
 		<p>
-			<div>	
+			<div id = "costume">	
 			<select name="costume" id="costume" onchange="selectpose(this.value)">
 				<option disabled selected>貴音さんの衣装を選択してください</option>
 				<option value="cusual">私服</option>
@@ -73,7 +73,7 @@
 		<label class="tab_class" for="tb_takane">表情</label>
 		<div class="content_class">
 		<p>
-			<div>	
+			<div id = "takane">	
 			<select name="menuList" id="menuList" disabled>
 				<option disabled selected>表情を選択してください</option>
 			</select>
@@ -84,7 +84,7 @@
 		<label class="tab_class" for="tb_words">台詞</label>
 		<div class="content_class">
 		<p>
-			<div id = "words" style="display:none">
+			<div id = "words">
 				<form action="" name="textInput" id="words">
 					<br>
 						名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
