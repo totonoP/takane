@@ -6,11 +6,11 @@
 
 .review-screen {
     position:  relative;
-    text-align:center;
     margin: 0 auto;
 }
 .review-screen canvas{
-    position: absolute;
+   position: absolute;
+   width: 100%;
    margin: 0 auto;
 }
 
