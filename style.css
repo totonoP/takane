@@ -5,6 +5,7 @@
 
 .review-screen {
     position:  relative;
+    text-align:center;
     margin: 0 auto;
 }
 .review-screen canvas{
