@@ -4,7 +4,6 @@ window.onload = function(){
 	DrawImage("img/serihu.png","cv3",0.7);
 }
 
-const costume = [{code:"cusual",name:"私服"},{code:"shiny",name:"シャイニートリニティ"},{code:"suit",name:"スーツ"},{code:"lady",name:"レディ・アルカード"}];
 const takane = [{code:"cusual", img:"shihuku-nomal-nomal2", name:"基本"},
 		{code:"cusual", img:"shihuku-nomal-egao", name:" 基本2"},
 		{code:"cusual", img:"shihuku-nomal-egao2", name:" にっこり"},
@@ -52,14 +51,6 @@ const takane = [{code:"cusual", img:"shihuku-nomal-nomal2", name:"基本"},
 		{code:"lady", img:"koujou2-udekumi-magao", name:"すん"},
 		{code:"lady", img:"koujou2-yoko-egao2", name:"横"},
 	       ];
-const face = 
-      {
-        "cusual": ["基本", "基本2", "にっこり","にっこり面妖","こまり顔","こまり顔２","すん","どうですか？",
-		   "悩み","悩み(目閉じ)","思案中 ","きりっ ","ぎょえ！","えーん！"],
-        "shiny": ["基本", "面妖(目閉じ)", "困り顔(目閉じ)","笑顔","笑顔(目閉じ)","赤面","赤面２","ぷいっ","半目"],
-        "suit": ["基本", "困り顔", "困り顔(目閉じ)","思案","悩み","赤面","赤面２","つん","ぷいっ","半目"],
-	"lady": ["笑顔", "笑顔２", "にっこり","にっこり面妖","うっとり","びっくり","びっくり２","伺い","不安","えー","すん","横"]
-      };
 
 //選択された衣装によって表情の選択肢を変える
 function selectpose(selectGenre){
