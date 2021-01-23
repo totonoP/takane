@@ -117,6 +117,11 @@ input:checked + .tab_class + .content_class {
 	background: #990066;
 	font-color: #ffffff;
 	font-size: 15px;
+	font-family: inherit;
+	border: 0;
+	color: #fff;
+	padding: 8px 16px;
+	cursor: pointer;
 }
  
 .c-button:hover {
