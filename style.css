@@ -52,7 +52,7 @@ input:checked + .tab_class + .content_class {
 }
 
 #who{
-    width: 100%; /*親要素いっぱい広げる*/
+    width: 70%; /*親要素いっぱい広げる*/
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
     border-radius: 3px; /*ボックス角の丸み*/
@@ -66,7 +66,7 @@ input:checked + .tab_class + .content_class {
 }
 
 #serihu{
-    width: 100%; /*親要素いっぱい広げる*/
+    width: 90%; /*親要素いっぱい広げる*/
     padding: 10px 15px; /*ボックスを大きくする*/
     font-size: 16px;
     border-radius: 3px; /*ボックス角の丸み*/
