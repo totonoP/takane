@@ -137,8 +137,7 @@ function Selecthk(hk_value){
 }
 
 function Selecttkn(tkn_value){
-	console.log(tkn_value)
-	//DrawImage("pose/"+hk_value+".png","cv",1);
+	DrawImage("pose/"+tkn_value+".png","cv2",1);
 }
 
 
