@@ -8,6 +8,7 @@ body{
 .bg_white{
 	width:900px;
 	height:100%;
+	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -0%);
 	background-image : url("base.png") ;
