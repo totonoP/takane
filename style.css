@@ -55,7 +55,9 @@ input:checked + .tab_class {
 input:checked + .tab_class + .content_class {
   display: block;
 }
-
+.foot{
+	 width: 100%;
+}
 #who{
     width: 70%; /*親要素いっぱい広げる*/
     padding: 10px 15px; /*ボックスを大きくする*/
@@ -107,13 +109,24 @@ input:checked + .tab_class + .content_class {
 	border: 2px solid #ddd; /*枠線*/
 	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
-#btn_dld{
-	width:40px;
-	height:25px;
-	background-color: #FCECEA;/ボタン背景色/
-	font-weight: bold;/文字ちょっと太く/
-	color: #FFB2AE;/ボタンテキストの色/
-	font-size: 20px;/フォントサイズ/
-	border: 5px solid #FFB2AE;/外枠線の太さ　直線　色/
-	border-radius: 30px;/角の丸み/
+.btn_dld{
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+ 
+.c-button:hover {
+  background: #1d49aa;
+}
+ 
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
 }
