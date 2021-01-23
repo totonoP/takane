@@ -135,6 +135,11 @@ function Selecthk(hk_value){
 	DrawImage("img/"+hk_value+".png","cv",1);
 }
 
+function Selecttkn(tkn_value){
+	console.log(tkn_value)
+	//DrawImage("pose/"+hk_value+".png","cv",1);
+}
+
 
 function DrawImage(img_path,cvs_name,t) {
 	document.getElementById('resultImage').style.visibility ="hidden";
