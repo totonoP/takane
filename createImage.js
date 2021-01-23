@@ -10,22 +10,21 @@ const face =
 
 //選択された衣装によって表情の選択肢を変える
 function selectpose(selectGenre){
-  
-  let menuList = document.getElementById('menuList');
-  menuList.disabled = false;
-  menuList.innerHTML = '';
-	
-  let option = document.createElement('option');
-  option.innerHTML = '表情を選択してください';
-  option.defaultSelected = true;
-  option.disabled = true;
-  menuList.appendChild(option);  
-  
-  face[selectGenre].forEach( menu => {
-    let option = document.createElement('option');
-    option.innerHTML = menu;
-    menuList.appendChild(option);  
-  });
+	let menuList = document.getElementById('menuList');
+	menuList.disabled = false;
+	menuList.innerHTML = '';
+
+	let option = document.createElement('option');
+	option.innerHTML = '表情を選択してください';
+	option.defaultSelected = true;
+	option.disabled = true;
+	menuList.appendChild(option);  
+
+	face[selectGenre].forEach( menu => {
+		let option = document.createElement('option');
+		option.innerHTML = menu;
+		menuList.appendChild(option);  
+	});
 }
 
 //画像のダウンロード
@@ -86,81 +85,52 @@ function toDraw() {//文字を画像に描画
 	}     //テキストを塗り潰しで描画
 }
 
-function whichselect(e) {//選択中の値を取得
-          switch(e) {
-                    case 1:var slct = document.getElementsByName('e1');
-                               var ans;
-                                  for(var i = 0; i < slct.length; i++){
-                                    if(slct[i].checked) {
-                                             ans = slct[i].value;
-                                    }
-                                  }
-                              break;
-                              
-                    case 2:var slct2 = document.getElementsByName('e2');
-                                  var ans;
-                                  for(var i = 0; i < slct2.length; i++){
-                                    if(slct2[i].checked) {
-                                             ans = slct2[i].value;
-                                    }
-                                  }
-                            break;
-                              
-                    default:console.log("エラーです。");break;
-                         }
-          DrawImage(ans,e,1);
-
-  }
+function Selecthk(hk_value){
+	DrawImage("img/"++".png","cv",1);
+}
 
 
-function DrawImage(name,n,t) {
+function DrawImage(img_path,cvs_name,t) {
 	document.getElementById('resultImage').style.visibility ="hidden";
-        document.getElementById('cv').style.visibility ="hidden";
+	document.getElementById('cv').style.visibility ="hidden";
 	document.getElementById('cv2').style.visibility ="hidden";
 	document.getElementById('cv3').style.visibility ="hidden";
 	document.getElementById('cv4').style.visibility ="hidden";
-  //2Dコンテキストのオブジェクトを生成する
-          switch(n){
-                    case 1:var cvs = document.getElementById('cv');break;
-                    case 2:var cvs = document.getElementById('cv2');break;
-                    case 3:var cvs = document.getElementById('cv3');break;
-                    default:console.log("エラーです。");break;
-               }
-            var ctx = cvs.getContext('2d');
-          ctx.clearRect(0, 0, 1920, 1080);
-            ctx.globalAlpha = t;
-            //画像オブジェクトを生成
-            var img = new Image();
-            if(n != 2)img.src ="img/"+name+".png";
-	    else img.src ="pose/"+name+".png";
-          console.log("画像読み込み直前！");
-            //画像をcanvasに設定
-            img.onload = function(){
-            ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
+	//2Dコンテキストのオブジェクトを生成する
+	var cvs = document.getElementById(cvs_name);
+	var ctx = cvs.getContext('2d');
+	
+	ctx.clearRect(0, 0, 1920, 1080);
+	ctx.globalAlpha = t;
+	
+	//画像オブジェクトを生成
+	var img = new Image();
+	img.src = img_path;
+	
+	//画像をcanvasに設定
+	img.onload = function(){
+		ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
 		document.getElementById('resultImage').style.visibility ="visible";
 		document.getElementById('cv').style.visibility ="visible";
 		document.getElementById('cv2').style.visibility ="visible";
 		document.getElementById('cv3').style.visibility ="visible";
 		document.getElementById('cv4').style.visibility ="visible";
-            }
+	}
 }
 
 
-/**
- * Canvas合成
- */
- async function concatCanvas(base, asset){
-  const canvas = document.querySelector(base);
-  const ctx = canvas.getContext("2d");
-  const downloadLink = document.getElementById('download_link');
-	 
-  for(let i=0; i<asset.length; i++){
-    const image1 = await getImagefromCanvas(asset[i]);
-    await ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
-	  console.log("create");
-	   
-  }   
-	 
+
+//Canvas合成
+async function concatCanvas(base, asset){
+	const canvas = document.querySelector(base);
+	const ctx = canvas.getContext("2d");
+	const downloadLink = document.getElementById('download_link');
+	for(let i=0; i<asset.length; i++){
+		const image1 = await getImagefromCanvas(asset[i]);
+		await ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
+		console.log("create");
+	}   
+
 }
 
 function load(){
@@ -170,9 +140,8 @@ function load(){
 }
  
 async function download(){
-  await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
-  await DL();
-  
+	await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
+	await DL();
 }
 
 
@@ -189,33 +158,23 @@ function DL()
 	a.click();
 }
 
-
-/**
- * Canvasを画像として取得
- *
- * @param {string} id  対象canvasのid
- * @return {object}
- */
+//Canvasを画像として取得
 function getImagefromCanvas(id){
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    const ctx = document.querySelector(id).getContext("2d");
-    image.onload = () => resolve(image);
-    image.onerror = (e) => reject(e);
-    image.src = ctx.canvas.toDataURL();
-  });
+	return new Promise((resolve, reject) => {
+		const image = new Image();
+		const ctx = document.querySelector(id).getContext("2d");
+		image.onload = () => resolve(image);
+		image.onerror = (e) => reject(e);
+		image.src = ctx.canvas.toDataURL();
+	});
 }
-/**
- * Canvasをすべて削除する
- *
- * @param {string} target 対象canvasのid
- * @return {void}
- */
+
+//Canvasをすべて削除する
 function eraseCanvas(target){
 	for(let i = 0;i < target.length;i++){
-  const canvas = document.getElementById(target[i]);
-  const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+		const canvas = document.getElementById(target[i]);
+		const ctx = canvas.getContext('2d');
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 	}
 }
 
