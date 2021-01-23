@@ -18,8 +18,11 @@
 .select-elements {
 	margin-left: auto;
         margin-right: auto;
-	width: 50%;
+	width: 960px;
 	height:30%;
+}
+.select-elements button{
+	width: 240px;
 }
 
 #hk {
