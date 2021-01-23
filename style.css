@@ -108,6 +108,8 @@ input:checked + .tab_class + .content_class {
 	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
 #btn_dld{
+	width:40px;
+	height:25px;
 	background-color: #FCECEA;/ボタン背景色/
 	font-weight: bold;/文字ちょっと太く/
 	color: #FFB2AE;/ボタンテキストの色/
