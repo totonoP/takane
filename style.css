@@ -22,7 +22,7 @@
 }
  
 .tab_class {
-  width: calc(100%/5);
+  width: calc(100%/4);
   height: 50px;
   background-color: darkgrey;
   line-height: 50px;
