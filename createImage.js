@@ -46,7 +46,7 @@ function toDraw() {//文字を画像に描画
 	var txt = document.forms.words.serihu.value; //描画する文字（セリフ）
 	var txt2 = document.forms.words.who.value;//話者の名前
 
-	ctx.font = "bold 48px 'Helvetica Neue','Arial','Hiragino Kaku Gothic ProN','Hiragino Sans','Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
+	ctx.font = "bold 48px 'Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
 	ctx.fillStyle = "white"; //文字色を白に
 	ctx.fillText(txt2,350,840);
 
