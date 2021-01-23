@@ -4,7 +4,22 @@ window.onload = function(){
 	DrawImage("img/serihu.png","cv3",0.7);
 }
 
-
+const costume = [{code:"cusual",name:"私服"},{code:"shiny",name:"シャイニートリニティ"},{code:"suit",name:"スーツ"},{code:"lady",name:"レディ・アルカード"}];
+const takane = [{code:"cusual", img:"shihuku-nomal-nomal2", name:"基本"},
+		{code:"cusual", img:"shihuku-nomal-egao", name:" 基本2"},
+		{code:"cusual", img:"shihuku-nomal-egao2", name:" にっこり"},
+		{code:"cusual", img:"shihuku-menyou-egao", name:" にっこり面妖"},
+		{code:"cusual", img:"shihuku-nomal-nayami", name:" こまり顔"},
+		{code:"cusual", img:"shihuku-nomal-nayami2", name:" こまり顔２"},
+		{code:"cusual", img:"shihuku-nomal-nomal", name:" すん"},
+		{code:"cusual", img:"shihuku-nomal-ukagai", name:" どうですか？"},
+		{code:"cusual", img:"shihuku-yoko-hukuzatu", name:" 悩み"},
+		{code:"cusual", img:"shihuku-yoko-metoji", name:" 悩み(目閉じ)"},
+		{code:"cusual", img:"shihuku-yoko-nayami", name:" 思案中"},
+		{code:"cusual", img:"shihuku-yoko-nomal", name:" きりっ"},
+		{code:"cusual", img:"shihuku-nomal-bikkuri", name:" ぎょえ！"},
+		{code:"cusual", img:"shihuku-nomal-komari", name:" えーん！"},
+	       ];
 const face = 
       {
         "cusual": ["基本", "基本2", "にっこり","にっこり面妖","こまり顔","こまり顔２","すん","どうですか？",
@@ -26,10 +41,12 @@ function selectpose(selectGenre){
 	option.disabled = true;
 	menuList.appendChild(option);  
 
-	face[selectGenre].forEach( menu => {
+	takane.forEach( menu => {
+		if(menu.code == selectGenre){
 		let option = document.createElement('option');
-		option.innerHTML = menu;
-		menuList.appendChild(option);  
+		option.innerHTML = menu.name;
+		menuList.appendChild(option);
+		}
 	});
 }
 
