@@ -121,8 +121,8 @@ input:checked + .tab_class + .content_class {
 	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
 #enter{
-	width: 30%; /*親要素いっぱい広げる*/
-	height: 20%;
+	width: 20%; /*親要素いっぱい広げる*/
+	height: 10%;
 	padding: 10px 15px; /*ボックスを大きくする*/
 	font-size: 16px;
 	border-radius: 3px; /*ボックス角の丸み*/
@@ -130,8 +130,8 @@ input:checked + .tab_class + .content_class {
 	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
 #clear{
-	width: 30%; /*親要素いっぱい広げる*/
-	height: 20%;
+	width: 20%; /*親要素いっぱい広げる*/
+	height: 10%;
 	padding: 10px 15px; /*ボックスを大きくする*/
 	font-size: 16px;
 	border-radius: 3px; /*ボックス角の丸み*/
