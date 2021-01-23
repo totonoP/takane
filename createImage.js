@@ -92,7 +92,7 @@ function toDraw() {//文字を画像に描画
 }
 
 function Selecthk(hk_value){
-	DrawImage("img/"++".png","cv",1);
+	DrawImage("img/"+hk_value+".png","cv",1);
 }
 
 
