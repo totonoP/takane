@@ -107,3 +107,11 @@ input:checked + .tab_class + .content_class {
 	border: 2px solid #ddd; /*枠線*/
 	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
+#btn_dld{
+	background-color: #FCECEA;/ボタン背景色/
+	font-weight: bold;/文字ちょっと太く/
+	color: #FFB2AE;/ボタンテキストの色/
+	font-size: 20px;/フォントサイズ/
+	border: 5px solid #FFB2AE;/外枠線の太さ　直線　色/
+	border-radius: 30px;/角の丸み/
+}
