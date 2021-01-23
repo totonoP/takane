@@ -3,10 +3,13 @@
    width: 100%;
    height: 100px;
 }
+
+.review-screen {
+    width: 100%;
+    height: 60%;
+}
 .review-screen canvas{
    position: absolute;
-   width: 100%;
-   margin: 0 auto;
 }
 
 
