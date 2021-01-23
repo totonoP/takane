@@ -48,7 +48,16 @@ document.getElementById('btn_words').onclick = function(){
 	document.getElementById('words').style.display = 'block';
 	console.log("台詞選択");
 }
-
+document.getElementById('btn_dld').onclick = async function(){
+	document.getElementById('hk').style.display = 'none';
+	document.getElementById('takane').style.display = 'none';
+	document.getElementById('words').style.display = 'none';
+	console.log("ダウンロード");
+	
+	await concatCanvas('#resultImage', ['#cv','#cv2','#cv3','#cv4']);
+  	await DL();
+	
+}
 
 function toDraw() {//文字を画像に描画
           var ctx = document.getElementById("cv4").getContext("2d");
