@@ -57,9 +57,8 @@
 			<option value="theater1"> シアター</option>
 		</select>
 	</div>
-		<br>
-	
-	<div id = "pose" style="display:none">
+	<br>
+	<div id = "takane" style="display:none">
 					     
 		<select name="costume" id="costume" onchange="createMenu(this.value)">
 			<option disabled selected>貴音さんの衣装を選択してください</option>
@@ -71,98 +70,19 @@
 		<select name="menuList" id="menuList" disabled>
 			<option disabled selected>表情を選択してください</option>
 		</select>
-						     
-		<input type="button" id="shihukubtn" value="私服" onclick="Kirikae('shihuku')">
-		<input type="button" id="shinybtn" value="シャイニートリニティ" onclick="Kirikae('shiny')">
-		<input type="button" id="sutsubtn" value="スーツ" onclick="Kirikae('sutsu')">
-		<input type="button" id="koujou2btn" value="レディ・アルカード" onclick="Kirikae('koujou2')">
-				
-		<form id="my_form">
-        <input id="ufile" name="ufile" type="file" accept="image/jpeg,image/png"><br>
-    </form>
-		<input type="button" value="戻る" onclick="document.getElementById('pose').style.display = 'none';">
-			</div>
+	</div>
 	
-	<div id = "shihuku" style="display:none">
-				
-				<input type="radio" name="e2" value="shihuku-nomal-nomal2" onchange = "whichselect(2)"> 基本
-				<input type="radio" name="e2" value="shihuku-nomal-egao" onchange = "whichselect(2)"> 基本2
-				<input type="radio" name="e2" value="shihuku-nomal-egao2" onchange = "whichselect(2)"> にっこり
-				<input type="radio" name="e2" value="shihuku-menyou-egao" onchange = "whichselect(2)"> にっこり面妖
-				<input type="radio" name="e2" value="shihuku-nomal-nayami" onchange = "whichselect(2)"> こまり顔
-				<input type="radio" name="e2" value="shihuku-nomal-nayami2" onchange = "whichselect(2)"> こまり顔２
-				<input type="radio" name="e2" value="shihuku-nomal-nomal" onchange = "whichselect(2)"> すん
-				<input type="radio" name="e2" value="shihuku-nomal-ukagai" onchange = "whichselect(2)"> どうですか？
-				<input type="radio" name="e2" value="shihuku-yoko-hukuzatu" onchange = "whichselect(2)"> 悩み
-				<input type="radio" name="e2" value="shihuku-yoko-metoji" onchange = "whichselect(2)"> 悩み(目閉じ)
-				<input type="radio" name="e2" value="shihuku-yoko-nayami" onchange = "whichselect(2)"> 思案中
-				<input type="radio" name="e2" value="shihuku-yoko-nomal" onchange = "whichselect(2)"> きりっ
-				<input type="radio" name="e2" value="shihuku-nomal-bikkuri" onchange = "whichselect(2)"> ぎょえ！
-				<input type="radio" name="e2" value="shihuku-nomal-komari" onchange = "whichselect(2)"> えーん！
-
-		<input type="button" value="戻る" onclick="document.getElementById('shihuku').style.display = 'none';">
-			</div>
-	
-	<div id = "shiny" style="display:none">
-				
-				<input type="radio" name="e2" value="shiny-nomal-nomal" onchange = "whichselect(2)"> 基本
-				<input type="radio" name="e2" value="shiny-menyou-metoji" onchange = "whichselect(2)"> 面妖(目閉じ)
-				<input type="radio" name="e2" value="shiny-yoko-sekimen" onchange = "whichselect(2)"> 困り顔
-				<input type="radio" name="e2" value="shiny-yoko-metoji" onchange = "whichselect(2)"> 困り顔(目閉じ)
-				<input type="radio" name="e2" value="shiny-yoko-egao" onchange = "whichselect(2)"> 笑顔
-				<input type="radio" name="e2" value="shiny-nomal-metoji" onchange = "whichselect(2)"> 笑顔(目閉じ)
-				<input type="radio" name="e2" value="shiny-nomal-sekimen" onchange = "whichselect(2)"> 赤面
-				<input type="radio" name="e2" value="shiny-nomal-bikkuri" onchange = "whichselect(2)"> 赤面２
-				<input type="radio" name="e2" value="shiny-nomal-metoji2" onchange = "whichselect(2)"> ぷいっ
-				<input type="radio" name="e2" value="shiny-nomal-henme" onchange = "whichselect(2)"> 半目
-
-		<input type="button" value="戻る" onclick="document.getElementById('shiny').style.display = 'none';">
-			</div>
-	
-	<div id = "sutsu" style="display:none">
-				
-				<input type="radio" name="e2" value="sutsu-nomal-egao" onchange = "whichselect(2)"> 基本
-				<input type="radio" name="e2" value="sutsu-nomal-nayami" onchange = "whichselect(2)"> 困り顔
-				<input type="radio" name="e2" value="sutsu-udekumi-sekimen2" onchange = "whichselect(2)"> 困り顔(目閉じ)
-				<input type="radio" name="e2" value="sutsu-udekumi-egao" onchange = "whichselect(2)"> 思案
-				<input type="radio" name="e2" value="sutsu-yoko-nayami" onchange = "whichselect(2)"> 悩み
-				<input type="radio" name="e2" value="sutsu-nomal-magao" onchange = "whichselect(2)"> 赤面
-				<input type="radio" name="e2" value="sutsu-yoko-sekimen" onchange = "whichselect(2)"> 赤面２
-				<input type="radio" name="e2" value="sutsu-yoko-egao" onchange = "whichselect(2)"> つん
-				<input type="radio" name="e2" value="sutsu-nomal-sekimen" onchange = "whichselect(2)"> ぷいっ
-				<input type="radio" name="e2" value="sutsu-nomal-henme" onchange = "whichselect(2)"> 半目
-
-		<input type="button" value="戻る" onclick="document.getElementById('sutsu').style.display = 'none';">
-			</div>
-	
-	<div id = "koujou2" style="display:none">
-				
-				<input type="radio" name="e2" value="koujou2-nomal-egao" onchange = "whichselect(2)"> 笑顔
-				<input type="radio" name="e2" value="koujou2-nomal-egao2" onchange = "whichselect(2)"> 笑顔２
-				<input type="radio" name="e2" value="koujou2-nomal-egao4" onchange = "whichselect(2)"> にっこり
-				<input type="radio" name="e2" value="koujou2-menyou-egao" onchange = "whichselect(2)"> にっこり面妖
-				<input type="radio" name="e2" value="koujou2-yoko-egao3" onchange = "whichselect(2)"> うっとり
-				<input type="radio" name="e2" value="koujou2-nomal-bikkuri2" onchange = "whichselect(2)"> びっくり
-				<input type="radio" name="e2" value="koujou2-nomal-bikkuri" onchange = "whichselect(2)"> びっくり２
-				<input type="radio" name="e2" value="koujou2-nomal-egao3" onchange = "whichselect(2)"> 伺い
-				<input type="radio" name="e2" value="koujou2-nomal-nayami" onchange = "whichselect(2)"> 不安
-				<input type="radio" name="e2" value="koujou2-nomal-nayami2" onchange = "whichselect(2)"> えー
-				<input type="radio" name="e2" value="koujou2-udekumi-magao" onchange = "whichselect(2)"> すん
-				<input type="radio" name="e2" value="koujou2-yoko-egao2" onchange = "whichselect(2)"> 横
-
-		<input type="button" value="戻る" onclick="document.getElementById('koujou2').style.display = 'none';">
-			</div>
-	
-	<form action="" name="textInput" id="words" style="display:none">
-		<br>
-			名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
-			セリフ：<textarea rows="3" cols="50" id = "serihu">面妖な！</textarea>
-			<input type="button" value="決定" onclick="toDraw()" />
-			<input type="button" value="すべてクリア" onclick="eraseCanvas(['cv','cv2','cv4'])">
-		<br>
-	</form>
-												     
-	<input type="button" value="ダウンロード" onclick="download()">
+	<div id = "words" style="display:none">
+		<form action="" name="textInput" id="words" style="display:none">
+			<br>
+				名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
+				セリフ：<textarea rows="3" cols="50" id = "serihu">面妖な！</textarea>
+				<input type="button" value="決定" onclick="toDraw()" />
+				<input type="button" value="すべてクリア" onclick="eraseCanvas(['cv','cv2','cv4'])">
+			<br>
+		</form>										     
+		<input type="button" value="ダウンロード" onclick="download()">
+	</div>
 	<a href="https://twitter.com/share" class="twitter-share-button" data-text="　"data-hashtags="貴音コミュジェネレータ" onclick="download()">Tweet</a>
 	
 	<script type="text/javascript" src="createImage.js"></script>
