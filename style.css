@@ -17,12 +17,12 @@ body{
 .first{
 	text-align:center;
 	width: 100%;
-	height: 100px;
+	height: auto;
 }
 
 .review-screen {
 	width: 100%;
-	height: 60%;
+	height: 55%;
 }
 .review-screen canvas{
 	width:70%;
@@ -34,7 +34,7 @@ body{
 
 .select-elements {
 	position: relative;
-	width: 80%;
+	width: 70%;
 	margin: auto;
 	flex-wrap: wrap;
 	display: flex;
