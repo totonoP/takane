@@ -87,7 +87,8 @@ function toDraw() {//文字を画像に描画
 	var txt = document.forms.words.serihu.value; //描画する文字（セリフ）
 	var txt2 = document.forms.words.who.value;//話者の名前
 
-	ctx.font = "48px 'Meiryo','sans-serif'";//フォントにArial,40px,太字を指定
+	ctx.font = "48px";
+	ctx.style.fontFamily = "'Helvetica Neue', 'Helvetica', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', 'sans-serif'";
 	ctx.fillStyle = "white"; //文字色を白に
 	ctx.fillText(txt2,350,840);
 
