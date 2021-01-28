@@ -5,6 +5,9 @@ body{
 	font-family: "ＭＳ 明朝","MS PMincho","MS PMincho","sans-serif";
 	background-image: url("bg.png"); 
 }
+input {
+font-size: 20px;
+}
 .bg_white{
 	width:90%;
 	height:100%;
