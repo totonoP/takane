@@ -25,7 +25,7 @@ body{
 	height: 60%;
 }
 .review-screen canvas{
-	width:80%;
+	width:70%;
 	height:auto;
 	position: absolute;
 	left: 50%;
