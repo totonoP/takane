@@ -6,7 +6,10 @@ body{
 	background-image: url("bg.png"); 
 }
 input {
-font-size: 20px;
+	font-size: 30px;
+}
+form {
+	font-size: 30px;
 }
 .bg_white{
 	width:90%;
