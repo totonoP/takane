@@ -6,7 +6,7 @@ body{
 	background-image: url("bg.png"); 
 }
 .bg_white{
-	width:80%;
+	width:90%;
 	height:100%;
 	position: absolute;
 	left: 50%;
@@ -25,7 +25,7 @@ body{
 	height: 40%;
 }
 .review-screen canvas{
-	width:80%;
+	width:90%;
 	height:auto;
 	position: absolute;
 	left: 50%;
