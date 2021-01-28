@@ -22,7 +22,7 @@ body{
 
 .review-screen {
 	width: 100%;
-	height: 30%;
+	height: 33%;
 }
 .review-screen canvas{
 	width:90%;
@@ -33,7 +33,7 @@ body{
 }
 
 .select-elements {
-  width: 80%;
+  width: 90%;
   margin: auto;
   flex-wrap: wrap;
   display: flex;
