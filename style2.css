@@ -1,65 +1,164 @@
-.first{
-   width: 100%;
-   height: auto;
+body{
+	height:100%;
+	width:100%;
+	font-size: 15px;
+	font-family: "ＭＳ 明朝","MS PMincho","MS PMincho","sans-serif";
+	background-image: url("bg.png"); 
 }
-
-.select-elements {
-	float: left;
-	overflow: hidden;
-	width: 30%;
-	height: 40%;
-	margin-bottom:300px
-
-}
-.select-elements input{
+.bg_white{
+	width:80%;
+	height:100%;
 	position: absolute;
-	font-size: 20px;
-	width: 20%;
+	left: 50%;
+	transform: translate(-50%, -0%);
+	background-image : url("base.png") ;
+	background-repeat : repeat ;
+}
+.first{
+	text-align:center;
+	width: 100%;
 	height: 100px;
-	padding: 12px 15px;
-	transition: 0.3s;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 0 5px 5px 0;
-}
-
-.select-elements #haikei {
-
-	margin-top: 20px;
-	background-color: #da3c41;
-}
-.select-elements #takane {
-
-	margin-top: 20%;
-	background-color: #1b2538;
 }
 
 .review-screen {
-    float: left;
-    position:  relative;
-    margin: 0 auto;
+	width: 100%;
+	height: auto;
 }
 .review-screen canvas{
-    width: 70%;
-    position: absolute;
-   margin: 0 auto;
+	width:80%;
+	height:auto;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -0%);
 }
 
-#hk {
-	clear: both;
-	top 50px;
+.select-elements {
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
 }
-input.where{
-	width: 1.5em;
-	height: 1.5em;
+ 
+.tab_class {
+  width: calc(100%/4);
+  height: 50px;
+  background-color: darkgrey;
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+}
+ 
+input[name="tab_name"] {
+  display: none;
+}
+ 
+input:checked + .tab_class {
+  background-color: #990066;
+  color: aliceblue;
+}
+ 
+.content_class {
+  display: none;
+  width: 100%;
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+}
+.foot{
+	 width: 100%;
+}
+#who{
+    width: 70%; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+#who:focus {
+    box-shadow: 0 0 5px 0 rgba(99,0,66,1);
+    border: 2px solid #FFF !important;
+    outline: 0;
 }
 
-#pose {
-	clear: both;
-	top 50px;
+#serihu{
+    width: 100%; /*親要素いっぱい広げる*/
+    padding: 10px 15px; /*ボックスを大きくする*/
+    font-size: 16px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #ddd; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
 }
-#serihu_form {
-	clear: both;
-	top 50%;
+#serihu:focus {
+    box-shadow: 0 0 5px 0 rgba(99,0,66,1);
+    border: 2px solid #FFF !important;
+    outline: 0;
 }
-
+#bg{
+	width: 70%; /*親要素いっぱい広げる*/
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+#costumemenu{
+	width: 70%; /*親要素いっぱい広げる*/
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+#menuList{
+	width: 70%; /*親要素いっぱい広げる*/
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+#enter{
+	width: 20%; /*親要素いっぱい広げる*/
+	height: 10%;
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+#clear{
+	width: 20%; /*親要素いっぱい広げる*/
+	height: 10%;
+	padding: 10px 15px; /*ボックスを大きくする*/
+	font-size: 16px;
+	border-radius: 3px; /*ボックス角の丸み*/
+	border: 2px solid #ddd; /*枠線*/
+	box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+}
+.btn_dld{
+	min-height:40px;
+	min-width: 100px;
+	appearance: none;
+	border-radius: 5px;
+	background: #990066;
+	font-color: #ffffff;
+	font-size: 15px;
+	font-family: inherit;
+	border: 0;
+	color: #fff;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+ 
+.c-button:hover {
+  background: #990066;
+}
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #990066;
+}
