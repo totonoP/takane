@@ -25,6 +25,8 @@ body{
 	height: 450px;
 }
 .review-screen canvas{
+	width:800px;
+	height:450px;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -0%);
