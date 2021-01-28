@@ -33,7 +33,7 @@ body{
 }
 
 .select-elements {
-  width: 800px;
+  width: 80%;
   margin: auto;
   flex-wrap: wrap;
   display: flex;
