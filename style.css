@@ -22,7 +22,7 @@ body{
 
 .review-screen {
 	width: 100%;
-	height: auto;
+	height: 60%;
 }
 .review-screen canvas{
 	width:80%;
