@@ -88,7 +88,7 @@ function toDraw() {//文字を画像に描画
 	var txt2 = document.forms.words.who.value;//話者の名前
 
 	//ctx.font = "48px 'Helvetica Neue', 'Helvetica', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', 'sans-serif', bold";
-	ctx.font = "48px 'sans-serif' bold";
+	ctx.font = "48px sans-serif bold";
 	ctx.fillStyle = "white"; //文字色を白に
 	ctx.fillText(txt2,350,840);
 
