@@ -89,6 +89,7 @@ function toDraw() {//文字を画像に描画
 
 	ctx.font = "48px 'Helvetica Neue', 'Helvetica', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Arial', 'Yu Gothic', 'Meiryo', 'sans-serif'";
 	ctx.fillStyle = "white"; //文字色を白に
+	ctx.style.fontWeight = "bold";
 	ctx.fillText(txt2,350,840);
 
 	var len = txt.length; 
