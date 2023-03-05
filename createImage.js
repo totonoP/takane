@@ -50,6 +50,12 @@ const takane = [{code:"cusual", img:"shihuku-nomal-nomal2", name:"基本"},
 		{code:"lady", img:"koujou2-nomal-nayami2", name:"えー"},
 		{code:"lady", img:"koujou2-udekumi-magao", name:"すん"},
 		{code:"lady", img:"koujou2-yoko-egao2", name:"横"},
+		{code:"santa", img:"santa-nomal-egao1", name:"笑顔1"},
+		{code:"santa", img:"santa-nomal-egao2", name:"笑顔2"},
+		{code:"santa", img:"santa-nomal-egao3", name:"笑顔3"},
+		{code:"santa", img:"santa-nomal-nayami", name:"悩み"},
+		{code:"santa", img:"santa-nomal-udekumi", name:"腕組み"},
+		{code:"santa", img:"santa-yoko-nomal", name:"思案"},
 	       ];
 
 //選択された衣装によって表情の選択肢を変える
