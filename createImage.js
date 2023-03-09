@@ -148,11 +148,15 @@ function Selecthk(hk_value){
 }
 
 function Selecttkn(tkn_value){
+	const startTime = performance.now(); // 開始時間
 	DrawImage("pose/"+tkn_value+".png","cv2",1);
+	const endTime = performance.now(); // 終了時間
+	console.log(endTime - startTime); // 何ミリ秒かかったかを表示する
 }
 
 
 function DrawImage(img_path,cvs_name,t) {
+	const startTime = performance.now(); // 開始時間
 	document.getElementById('resultImage').style.visibility ="hidden";
 	document.getElementById('cv').style.visibility ="hidden";
 	document.getElementById('cv2').style.visibility ="hidden";
@@ -170,6 +174,7 @@ function DrawImage(img_path,cvs_name,t) {
 	img.src = img_path;
 	
 	//画像をcanvasに設定
+	
 	img.onload = function(){
 		ctx.drawImage(img, 0, 0, 1920, 1080);  //400x300に縮小表示
 		document.getElementById('resultImage').style.visibility ="visible";
@@ -178,6 +183,8 @@ function DrawImage(img_path,cvs_name,t) {
 //		document.getElementById('cv3').style.visibility ="visible";
 		document.getElementById('cv4').style.visibility ="visible";
 	}
+	const endTime = performance.now(); // 終了時間
+	console.log(endTime - startTime); // 何ミリ秒かかったかを表示する
 }
 
 
