@@ -175,7 +175,7 @@ function DrawImage(img_path,cvs_name,t) {
 		document.getElementById('resultImage').style.visibility ="visible";
 		document.getElementById('cv').style.visibility ="visible";
 		document.getElementById('cv2').style.visibility ="visible";
-		document.getElementById('cv3').style.visibility ="visible";
+//		document.getElementById('cv3').style.visibility ="visible";
 		document.getElementById('cv4').style.visibility ="visible";
 	}
 }
